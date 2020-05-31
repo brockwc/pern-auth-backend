@@ -3,16 +3,24 @@ const db = require('../models')
 const index = (req, res) => {
     db.Game.find({}, (err, foundGames) => {
         if (err) console.log('Error in games#index:', err)
+        
+        if(!foundGames) res.json({
+            message: 'No Games found in database.'
+        })
 
-        res.status(200).json(foundGames);
+        res.status(200).json({ games: foundGames });
     })
 }
 
 const show = (req, res) => {
-    db.Game.findById({ id: req.params.id }, (err, foundGame) => {
+    db.Game.findById(req.params.id, (err, foundGame) => {
         if (err) console.log('Error in games#show:', err)
-
-        res.send("Incomplete games#show controller function")
+        
+        if (!foundGame) res.json({
+            message: 'Game with provided ID not found.'
+        })
+        
+        res.status(200).json({ game: foundGame })
     })
 }
 
