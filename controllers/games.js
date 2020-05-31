@@ -28,25 +28,34 @@ const create = (req, res) => {
     db.Game.create(req.body, (err, savedGame) => {
         if (err) console.log('Error in games#create:', err)
 
-        // Comprehensive validations and error handling should go here
+        // Validations and error handling here
 
         res.status(200).json({ game: savedGame })
     })
 }
 
 const update = (req, res) => {
-    db.Game.findByIdAndUpdate(req.params.id, req.body, (err, updatedGame) => {
+    const options = { new: true }
+    db.Game.findByIdAndUpdate(req.params.id, req.body, options, (err, updatedGame) => {
         if (err) console.log('Error in games#update:', err)
+        if (!updatedGame) return res.json({
+            message: "No game with that ID found."
+        })
 
-        res.send("Incomplete games#update controller function")
+        // Validations and error handling here
+
+        res.status(200).json({ game: updatedGame })
     })
 }
 
 const destroy = (req, res) => {
     db.Game.findByIdAndDelete(req.params.id, (err, deletedGame) => {
         if (err) console.log('Error in games#destroy:', err)
+        if (!deletedGame) return res.json({
+            message: "No game with that ID found."
+        })
 
-        res.send("Incomplete games#destroy controller function")
+        res.status(200).json({ game: deletedGame })
     })
 }
 
