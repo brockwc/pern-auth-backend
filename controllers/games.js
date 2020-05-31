@@ -28,7 +28,9 @@ const create = (req, res) => {
     db.Game.create(req.body, (err, savedGame) => {
         if (err) console.log('Error in games#create:', err)
 
-        res.send("Incomplete games#create controller function")
+        // Comprehensive validations and error handling should go here
+
+        res.status(200).json({ game: savedGame })
     })
 }
 
