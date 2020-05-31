@@ -4,7 +4,7 @@ const index = (req, res) => {
     db.Game.find({}, (err, foundGames) => {
         if (err) console.log('Error in games#index:', err)
 
-        res.send("Incomplete games#index controller function")
+        res.status(200).json(foundGames);
     })
 }
 
