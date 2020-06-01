@@ -4,7 +4,7 @@ const index = (req, res) => {
     db.Game.find({}, (err, foundGames) => {
         if (err) console.log('Error in games#index:', err)
         
-        if(!foundGames) res.json({
+        if(!foundGames) return res.json({
             message: 'No Games found in database.'
         })
 
@@ -16,7 +16,7 @@ const show = (req, res) => {
     db.Game.findById(req.params.id, (err, foundGame) => {
         if (err) console.log('Error in games#show:', err)
         
-        if (!foundGame) res.json({
+        if (!foundGame) return res.json({
             message: 'Game with provided ID not found.'
         })
         
