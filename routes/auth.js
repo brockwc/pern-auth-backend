@@ -1,9 +1,9 @@
 const router = require('express').Router()
-// TODO: passport import here
+const passport = require('../passport')
 const ctrl = require('../controllers')
 
 // PATH = /api/v1/auth
-router.post('/login', ctrl.auth.login)
+router.post('/login', passport.authenticate('local'), ctrl.auth.login)
 router.post('/register', ctrl.auth.register)
 router.delete('/logout', ctrl.auth.logout)
 // utility route - not for users
