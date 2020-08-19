@@ -1,3 +1,4 @@
 module.exports = {
-    games: require('./games')
+    games: require('./games'),
+    auth: require('./auth')
 }

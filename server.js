@@ -14,6 +14,7 @@ app.use(cors())
 
 // middleware - API routes
 app.use('/api/v1/games', routes.games)
+app.use('/api/v1/auth', routes.auth)
 
 // connection
 app.listen(port, () => console.log(`Server is running on port ${port}`))

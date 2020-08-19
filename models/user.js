@@ -26,7 +26,7 @@ UserSchema.methods = {
   // hash a plain text into a much more secure string that is stored in the db
   hashPassword: function (plainTextPassword) {
     // storing a pw as plaintext is never an option
-    const salt = bcrypt.genSalt(10)
+    const salt = bcrypt.genSaltSync(10)
     /* 
       bcrypt provides a reliable, tested solution for hashing passwords using
       the plaintext input and salt data (basically a random string data) to 
@@ -37,7 +37,7 @@ UserSchema.methods = {
 }
 
 // Use a 'pre' hook that will modify the user before saving them to the DB
-UserSchema.pre('save', next => {
+UserSchema.pre('save', function(next) {
   // if there's no password
   if (!this.password) {
     // exit the function
