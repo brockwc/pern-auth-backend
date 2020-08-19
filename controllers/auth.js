@@ -2,7 +2,11 @@ const db = require('../models')
 const bcrypt = require('bcrypt')
 
 const login = (req, res) => {
+  
+  console.log('req.user here >>>>>>>>>>>', req.user)
+  console.log('req.session here >>>>>>>>>>>', req.session)
 
+  res.json({ user: req.user.email })
 }
 
 const register = (req, res) => {
