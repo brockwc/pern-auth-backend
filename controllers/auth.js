@@ -44,7 +44,12 @@ const register = (req, res) => {
 }
 
 const logout = (req, res) => {
+  if (!req.user) return res.json({
+    message: 'No User to log out'
+  })
 
+  req.logout()
+  res.json({ message: "User logged out" })
 }
 
 // This is a utility function for developer use only
