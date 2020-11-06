@@ -1,9 +1,8 @@
 const db = require('../models')
 
+//working
 const index = (req, res) => {
-    db.Game.find({}, (err, foundGames) => {
-        if (err) console.log('Error in games#index:', err)
-        
+    db.game.findAll().then((foundGames) => {
         if(!foundGames) return res.json({
             message: 'No Games found in database.'
         })
@@ -12,10 +11,12 @@ const index = (req, res) => {
     })
 }
 
+//not working
 const show = (req, res) => {
-    db.Game.findById(req.params.id, (err, foundGame) => {
-        if (err) console.log('Error in games#show:', err)
-        
+  console.log('in the show route')
+  console.log(req.params)
+  //not sure React side?
+    db.game.findByPk(req.params.id).then((foundGame) => {
         if (!foundGame) return res.json({
             message: 'Game with provided ID not found.'
         })
@@ -24,38 +25,36 @@ const show = (req, res) => {
     })
 }
 
+//working
 const create = (req, res) => {
-    db.Game.create(req.body, (err, savedGame) => {
-        if (err) console.log('Error in games#create:', err)
-
+    db.game.create(req.body).then((savedGame) => {
         // Validations and error handling here
-
         res.status(200).json({ game: savedGame })
     })
 }
 
+//not sure need to get show page working first
 const update = (req, res) => {
-    const options = { new: true }
-    db.Game.findByIdAndUpdate(req.params.id, req.body, options, (err, updatedGame) => {
-        if (err) console.log('Error in games#update:', err)
+    db.game.update({
+      ...req.body
+    }, {
+      where: {
+        id: req.params.id
+      }
+    }).then((updatedGame) => {
         if (!updatedGame) return res.json({
             message: "No game with that ID found."
         })
-
         // Validations and error handling here
-
         res.status(200).json({ game: updatedGame })
     })
 }
-
+//not sure
 const destroy = (req, res) => {
-    db.Game.findByIdAndDelete(req.params.id, (err, deletedGame) => {
-        if (err) console.log('Error in games#destroy:', err)
-        if (!deletedGame) return res.json({
-            message: "No game with that ID found."
-        })
-
-        res.status(200).json({ game: deletedGame })
+    db.game.destroy({
+      where: { id: req.params.id }
+    }).then(() => {
+        res.status(200)
     })
 }
 

@@ -1,6 +1,6 @@
 const passport = require('passport')
 const LocalStrategy = require('./localStrategy')
-const User = require('../models/user')
+const db = require('../models')
 
 /* 
   this function is called on login and saves the logged in user ID 
@@ -9,7 +9,7 @@ const User = require('../models/user')
 passport.serializeUser((user, done) => {
   console.log('passport/index.js: serializeUser function is called')
   console.log(user)
-  done(null, user._id)
+  done(null, user.id)
 })
 
 /*
@@ -20,8 +20,7 @@ passport.deserializeUser((id, done) => {
   console.log('passport/index.js: deserializeUser function is called');
   
   // look for the user by their ID, return a user object containing only their email
-  User.findById(id, 'email', (err, user) => {
-    if (err) return done(err, null)
+  db.user.findByPk(id).then((user) => {
     console.log(user)
     done(null, user)
   })

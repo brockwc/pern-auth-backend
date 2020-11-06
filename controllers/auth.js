@@ -2,10 +2,8 @@ const db = require('../models')
 const bcrypt = require('bcrypt')
 
 const login = (req, res) => {
-  
   console.log('req.user here >>>>>>>>>>>', req.user)
   console.log('req.session here >>>>>>>>>>>', req.session)
-
   res.json({ user: req.user.email })
 }
 
@@ -20,26 +18,22 @@ const register = (req, res) => {
   }
 
   // make sure the user doesn't already exist
-  db.User.findOne({ email: email }, (err, foundUser) => {
-    if (err) return res.json({
-      message: 'Something went wrong'
-    })
-
+  db.user.findOne({ 
+    where: { email: email }
+  }).then((foundUser) => {
     if (foundUser) return res.json({
       message: "A user with that email already exists"
     })
 
     // if the user doesnt exist, create and save a user to the DB
-    const newUser = new db.User({
+    db.user.create({
       name,
       email,
       password
+    }).then((newUser)=> {
+      res.json(newUser)
     })
-
-    newUser.save((err, savedUser) => {
-      if (err) res.json(err)
-      res.json(savedUser)
-    })
+    
   })
 }
 
@@ -47,7 +41,6 @@ const logout = (req, res) => {
   if (!req.user) return res.json({
     message: 'No User to log out'
   })
-
   req.logout()
   res.json({ message: "User logged out" })
 }
