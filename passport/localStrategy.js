@@ -14,9 +14,6 @@ const strategy = new LocalStrategy(
         email: email
       }
     }).then(foundUser => {
-      // error handling
-      if (err) return done(err)
-      
       // no user is found
       if (!foundUser) {
         return done(null, false, { message: 'Invalid Credentials' })
@@ -28,6 +25,9 @@ const strategy = new LocalStrategy(
       }
       
       return done(null, foundUser)
+    }).catch(err => {
+      // error handling
+      return done(err)
     })
   }
 )
