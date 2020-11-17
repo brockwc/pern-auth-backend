@@ -4,6 +4,7 @@ const express = require('express')
 const cors = require('cors')
 const session = require('express-session')
 const morgan = require('morgan')
+const bcrypt = require('bcrypt')
 
 const routes = require('./routes')
 const passport = require('./passport')
