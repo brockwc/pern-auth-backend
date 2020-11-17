@@ -1,16 +1,16 @@
 {
   "development": {
-    "database": "gamelib",
+    "database": "DB NAME HERE",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "database": "gamelib",
+    "database": "DB NAME HERE",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "database": "gamelib",
+    "database": "DB NAME HERE",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }

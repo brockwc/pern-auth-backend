@@ -2,7 +2,6 @@
 // added
 const bcrypt = require('bcrypt')
 
-
 const {
   Model
 } = require('sequelize');
@@ -16,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
     }
-     validPassword(passwordTyped) {
+    validPassword(passwordTyped) {
       return bcrypt.compareSync(passwordTyped, this.password);
     };
 
@@ -28,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   //changed
-    user.init({
+  user.init({
     email: {
       type: DataTypes.STRING,
       validate: {
@@ -60,9 +59,7 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'user',
   });
 
-
-
-    user.beforeCreate((pendingUser, options) => {
+  user.beforeCreate((pendingUser, options) => {
     if (pendingUser && pendingUser.password) {
       // hash the password
       let hash = bcrypt.hashSync(pendingUser.password, 12);

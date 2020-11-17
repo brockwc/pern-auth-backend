@@ -13,23 +13,20 @@ const strategy = new LocalStrategy(
       where: {
         email: email
       }
-    }).then((foundUser) => {
-      console.log('the found user was')
-      console.log('the found user was')
-      console.log('the found user was')
-      console.log(foundUser)
-      console.log('the found user was')
-      console.log('the found user was')
-      console.log('the found user was')
-
+    }).then(foundUser => {
       // error handling
-      //if (err) return done(err)
+      if (err) return done(err)
+      
       // no user is found
-      if (!foundUser) return done(null, false, { message: 'Invalid Credentials' })
+      if (!foundUser) {
+        return done(null, false, { message: 'Invalid Credentials' })
+      }
+
       // user is found but password doesn't match
-      if (!foundUser.validPassword(password)) return done(null, false, { message: 'Invalid Credentials' })
-      // return the user object
-      // take out password
+      if (!foundUser.validPassword(password)) {
+        return done(null, false, { message: 'Invalid Credentials' })
+      }
+      
       return done(null, foundUser)
     })
   }

@@ -1,15 +1,18 @@
 // imports
 require('dotenv').config();
 const express = require('express')
-const routes = require('./routes')
 const cors = require('cors')
 const session = require('express-session')
-//const MongoStore = require('connect-mongo')(session)
-//const isLoggedIn = require('./middleware/isLoggedIn');
+const morgan = require('morgan')
+
+const routes = require('./routes')
 const passport = require('./passport')
 
-const port = process.env.PORT || 3001
+const port = process.env.PORT || 4000
 const app = express()
+
+// middleware - server logging
+app.use(morgan('dev'))
 
 // middleware - JSON parsing
 app.use(express.json())
@@ -27,7 +30,7 @@ app.use(cors(corsOptions))
 // middleware - session config
 app.use(session({
   // session is stored in the DB
-  secret: "ILikePizza",
+  secret: "REPLACE_THIS_WITH_A_REAL_SECRET",
   resave: false, // will not resave sessions
   saveUninitialized: false, // only create a session when a property is added to the session
   cookie: {
@@ -39,18 +42,7 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 
-// middleware for logged in user
-app.use((req, res, next) => {
-  // before every route, attach the flash messages and current user to res.locals
-  // res.locals.alerts = req.flash();
-  res.locals.currentUser = req.user;
-  next();
-});
-
-
-
 // middleware - API routes
-app.use('/api/v1/games', routes.games)
 app.use('/api/v1/auth', routes.auth)
 
 // connection
