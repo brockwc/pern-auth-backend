@@ -14,5 +14,21 @@
     "passport-local": "^1.0.0",
     "pg": "^8.4.2",
     "sequelize": "^6.3.5"
-  }
+  },
+  "name": "brewser-auth-backend",
+  "description": "> Note: Authenticated /w Passport",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmcho311/brewser-auth-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmcho311/brewser-auth-backend/issues"
+  },
+  "homepage": "https://github.com/jmcho311/brewser-auth-backend#readme"
 }
