@@ -11,6 +11,7 @@ const index = (req, res) => {
         .catch(err => console.log('error at teas#index', err))
 }
 
+// Find One Tea
 const show = (req, res) => {
     db.tea.findByPk(req.params.id).then((foundTea) => {
         if (!foundTea) return res.json({
