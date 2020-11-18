@@ -4,9 +4,9 @@ const ctrl = require('../controllers/brewery')
 // PATH = /api/v1/auth
 router.get('/', ctrl.index)
 router.get('/:id', ctrl.show)
-// router.post('/', ctrl.brewery.create)
-// router.put('/:id', ctrl.brewery.update)
-// router.delete('/:id', ctrl.brewery.destroy)
+router.post('/', ctrl.create)
+router.put('/:id', ctrl.update)
+router.delete('/:id', ctrl.destroy)
 
 
 //router.post('/login', passport.authenticate('local'), ctrl.auth.login)

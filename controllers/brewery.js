@@ -12,7 +12,11 @@ const index = (req, res) => {
 }
 
 const show = (req, res) => {
-    db.game.findByPk(req.params.id).then((foundBrewery) => {
+    db.brewery.findAll({
+        where: {
+            breweryId: req.params.id
+        }
+    }).then((foundBrewery) => {
         if(!foundBrewery) return res.json({
             message: 'Brewery with provided ID not found.'
         })
@@ -20,7 +24,41 @@ const show = (req, res) => {
     })
 }
 
+const create = (req, res) => {
+    db.brewery.create(req.body).then((savedBrewery) => {
+        // Validations and error handling here
+        res.status(200).json({ brewery: savedBrewery })
+    })
+}
+
+const update = (req, res) => {
+    db.brewery.update({
+        ...req.body
+    }, {
+        where: {
+        id: req.params.id
+        }
+    }).then((updatedBrewery) => {
+        if (!updatedBrewery) return res.json({
+            message: "No brewery with that ID found."
+        })
+        // Validations and error handling here
+        res.status(200).json({ brewery: updatedBrewery })
+    })
+}
+
+const destroy = (req, res) => {
+    db.brewery.destroy({
+        where: { id: req.params.id }
+    }).then(() => {
+        res.status(200)
+    })
+}
+
 module.exports = {
     index,
-    show
+    show,
+    create,
+    update,
+    destroy
 }
