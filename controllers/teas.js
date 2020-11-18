@@ -6,7 +6,7 @@ const index = (req, res) => {
         if (!foundTeas) return res.json({
             message: 'No teas in db'
         })
-        res.send('Incomplete teas#index controller function')
+        res.send(foundTeas)
     })
         .catch(err => console.log('error at teas#index', err))
 }
