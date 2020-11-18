@@ -306,7 +306,7 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          "name": "Promote Alertness,",
+          "name": "Promote Alertness",
           createdAt: new Date(),
           updatedAt: new Date()
         },
