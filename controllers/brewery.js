@@ -1,4 +1,18 @@
 const db = require('../models')
+const axios = require('axios')
+
+// api request example
+const apiRequest = (req, res) => {
+    // when react app makes request to this route, we make request to API
+    console.log(req.query.q)
+    axios.get(`https://api.openbrewerydb.org/breweries/search?query=${req.query.q}`)
+        .then(response => {
+            // console.log(response)
+            // res.send('request complete')
+            res.json(response.data)
+        })
+}
+
 
 //Find all of the brewery posts
 const index = (req, res) => {
@@ -60,5 +74,6 @@ module.exports = {
     show,
     create,
     update,
-    destroy
+    destroy,
+    apiRequest
 }
