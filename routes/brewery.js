@@ -1,8 +1,12 @@
 const router = require('express').Router()
-const ctrl = require('../controllers')
+const ctrl = require('../controllers/brewery')
 
 // PATH = /api/v1/auth
-router.get('/',)
+router.get('/', ctrl.index)
+router.get('/:id', ctrl.show)
+// router.post('/', ctrl.brewery.create)
+// router.put('/:id', ctrl.brewery.update)
+// router.delete('/:id', ctrl.brewery.destroy)
 
 
 //router.post('/login', passport.authenticate('local'), ctrl.auth.login)
