@@ -4,7 +4,11 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkDelete('benefits', null, { truncate: true, cascade: true, restartIdentity: true });
 
+<<<<<<< HEAD:seeders/20201117192704-soulsipn-bens.js
     await queryInterface.bulkInsert('benefits', [
+=======
+    const bulkbenefits = await queryInterface.bulkInsert('benefits', [
+>>>>>>> submain:seeders/20201117221458-bens.js
         {
           "name": "Adaptogen",
           createdAt: new Date(),
@@ -395,7 +399,11 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date()
         },
+<<<<<<< HEAD:seeders/20201117192704-soulsipn-bens.js
     ], {})
+=======
+    ], {returing: true })
+>>>>>>> submain:seeders/20201117221458-bens.js
   },
 
   down: async (queryInterface, Sequelize) => {
