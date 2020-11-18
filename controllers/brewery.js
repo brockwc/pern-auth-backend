@@ -1,7 +1,8 @@
 const db = require('../models')
 const axios = require('axios')
 
-//API Request Example
+//API Request
+//routes to http://localhost:4000/api/v1/brewery/search?q=(INSERT QUERY)
 const apiRequest = (req,res) => {
     //when react app makes a request to this route, we make a request to the API
     console.log(req.query.q)
@@ -10,6 +11,7 @@ const apiRequest = (req,res) => {
             res.json(response.data)
         })
 }
+
 
 
 //Find all of the brewery posts
