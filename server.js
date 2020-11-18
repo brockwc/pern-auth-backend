@@ -44,6 +44,7 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 // middleware - API routes
+
 app.use('/api/v1/allteas', routes.teas)
 app.use('/api/v1/allbenefits', routes.benefits)
 app.use('/api/v1/auth', routes.auth)
