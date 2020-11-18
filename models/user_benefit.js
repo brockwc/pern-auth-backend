@@ -14,8 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   user_benefit.init({
-    benefit_id: DataTypes.INTEGER,
-    user_id: DataTypes.INTEGER
+    benefitId: DataTypes.INTEGER,
+    userId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'user_benefit',

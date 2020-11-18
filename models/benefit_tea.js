@@ -11,13 +11,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      models.benefit.belongsTo(models.user, { through: 'user_benefit' }) 
-      models.benefit.belongsTo(models.tea, { through: 'benefit_tea' })
     }
   };
   benefit_tea.init({
-    benefit_id: DataTypes.INTEGER,
-    tea_id: DataTypes.INTEGER
+    benefitId: DataTypes.INTEGER,
+    teaId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'benefit_tea',
