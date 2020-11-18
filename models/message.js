@@ -11,6 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      model.message.hasMany(models.user);
+      // ask how to accommodate an association for a message that two users need to access.
     }
   };
   message.init({
