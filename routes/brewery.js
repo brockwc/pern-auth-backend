@@ -1,8 +1,8 @@
 const router = require('express').Router()
 const ctrl = require('../controllers/brewery')
 
+//testing API
 router.get('/search', ctrl.apiRequest)
-
 
 // PATH = /api/v1/auth
 router.get('/', ctrl.index)
