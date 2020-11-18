@@ -44,7 +44,9 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 // middleware - API routes
+// app.use('/api/v1/teas', routes.teas)
 app.use('/api/v1/auth', routes.auth)
+
 
 // connection
 app.listen(port, () => console.log(`Server is running on port ${port}`))
