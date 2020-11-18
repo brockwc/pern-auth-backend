@@ -53,8 +53,19 @@ module.exports = (sequelize, DataTypes) => {
           msg: 'Password must be between 8 and 99 characters'
         }
       }
+    },
+    birthday: {
+      type: DataTypes.DATE,
+      validate: {
+        isOfAge() {
+          if ((Date.now() - value) < (18 * 31556952000)) {
+            throw new Error("Sorry, you must be 18 to use this site")
+          }
+        }
+      }
     }
-  }, {
+  }, 
+  {
     sequelize,
     modelName: 'user',
   });
