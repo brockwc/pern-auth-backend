@@ -4,9 +4,7 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkDelete('benefits', null, { truncate: true, cascade: true, restartIdentity: true });
 
-    const bulkbenefits = await queryInterface.bulkInsert('benefits', [
-      {
-        "data":[
+    await queryInterface.bulkInsert('benefits', [
         {
           "name": "Adaptogen",
           createdAt: new Date(),
@@ -396,9 +394,8 @@ module.exports = {
           "name": "Warming",
           createdAt: new Date(),
           updatedAt: new Date()
-        },]
-      }
-    ], {returing: true })
+        },
+    ], {})
   },
 
   down: async (queryInterface, Sequelize) => {

@@ -9,7 +9,7 @@ module.exports = {
         firstName: 'Lauren',
         lastName: 'Nguyen',
         email: 'lauren@email.com',
-        password: bcrypt.hashSync('1234', 12),
+        password: 'password', 
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -17,15 +17,15 @@ module.exports = {
         firstName: 'Brock',
         lastName: 'Molmen',
         email: 'brock@brock.brock',
-        password: bcrypt.hashSync('1234', 12),
+        password: 'password', 
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         firstName: 'Jamie',
         lastName: 'Cabrigas',
-        email: 'jami@email.com'
-        password: bcrypt.hashSync('1234', 12),
+        email: 'jami@email.com',
+        password: 'password', 
         createdAt: new Date(),
         updatedAt: new Date()
       },

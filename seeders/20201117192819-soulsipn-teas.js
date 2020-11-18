@@ -6,7 +6,6 @@ module.exports = {
 
     const bulkteas = await queryInterface.bulkInsert('teas', [
       {
-        "data": [{
           "name": "Organic Yunnan Black Tea",
           "type": "Black",
           "description": "Gourmet black tea from Yunnan province is generally known Dianhong Tea. The main difference between specialty Dianhong and other Chinese black teas is the amount of fine leaf buds, or 'golden tips' present in the dried tea. Dianhong teas produce a brassy golden orange brew color with a sweet, gentle aroma and no astringency. Cheaper Dianhong varieties produce a darker brownish brew that can be very bitter.",
@@ -62,7 +61,6 @@ module.exports = {
         {
           "name": "Monkey's Pick Oolong Tea",
           "type": "Oolong",
-          "brew": "3",
           "description": "Folklore tells of a man discovering a tea bush hanging off the side of a cliff. Unable to reach it, he trained a monkey to pick the leaves for him. While this practice isn't in use today, the name certainly has stuck. Monkey's Pick Oolong boasts earthy, unique aromas that are unveiled with each successive steeping as the leaves unfurl.",
           createdAt: new Date(),
           updatedAt: new Date()
@@ -191,7 +189,6 @@ module.exports = {
         {
           "name": "Mint",
           "type": "Herbal",
-          "brew": "4",
           "description": "Mint oil and leaves have been used since the Ancient Egyptians for medicinal purposes. Our Mint is naturally dried and grown on our tea estates in Zhejiang, China. From cuisines and cleansers to medicine and oils, Mint is one versatile herb! Get creative and add a few Mint leaves to your tea for an uplifting change. ",
           createdAt: new Date(),
           updatedAt: new Date()
@@ -199,7 +196,6 @@ module.exports = {
         {
           "name": "American Ginseng",
           "type": "Herbal",
-          "brew": "7",
           "description": "Ginseng is a fleshy root from the plant species Panax, which means “all heal” in Greek. The name itself is translated from the Chinese characters meaning “man root,” and it has long been used in traditional Chinese medicine. It has been known to be an adaptogen – not only helping the body deal with stress, but also cooling it and boosting immunity.",
           createdAt: new Date(),
           updatedAt: new Date()
@@ -216,7 +212,6 @@ module.exports = {
         {
           "name": "Longan",
           "type": "Herbal",
-          "brew": "7",
           "description": "Meaning “dragon eye” in Chinese, Longan is a native fruit to Southern China that’s similar to lychee. It is often used in Chinese cuisine and desserts. As an herbal medicine, Longan is high in iron making it an excellent supplement those who need it, especially women. Try eating it like raisins or brew with goji berries for a delicious health drink.",
           createdAt: new Date(),
           updatedAt: new Date()
@@ -225,7 +220,6 @@ module.exports = {
         {
           "name": "Lemongrass",
           "type": "Herbal",
-          "brew": "7",
           "description": "Native to India and Asia, Lemon Grass is a tropical plant widely used throughout Asia in cuisines from soups to curries and brewed as a tea. With a mild citrus flavor and aroma, it also contains citral – an essential oil that is also known to be boast antimicrobial and antiviral properties.",
           createdAt: new Date(),
           updatedAt: new Date()
@@ -234,7 +228,6 @@ module.exports = {
         {
           "name": "Lemon Verbena",
           "type": "Herbal",
-          "brew": "7",
           "description": "Originally from South America, Lemon Verbena is an herb with a power lemon scent. It was introduced to Europe in the 17th century where it was used in cuisines as well as herbal drinks and teas in place of actual lemons. It is also known to aid in digestion and have mild calming effects.",
           createdAt: new Date(),
           updatedAt: new Date()
@@ -251,7 +244,6 @@ module.exports = {
 
           "name": "Lavender",
           "type": "Herbal",
-          "brew": "4 - 5 mins",
           "description": "Lavender has long been used for its soothing effects. Drinking a cup before sleeping can help promote a restful night. Lavender is highly aromatic with a light, sweet taste. Add some to your bath can infuse your skin with softening oils or try blending it with mint and other teas for a fragrant treat.",
           createdAt: new Date(),
           updatedAt: new Date()
@@ -356,7 +348,6 @@ module.exports = {
         {
           "name": "Balsam Pear",
           "type": "Herbal",
-          "brew": "7",
           "description": "Balsam Pear or “bitter melon,” is an edible fruit grown in Asia, Africa and the Caribbean. It has been traditionally used as a home remedy for various illnesses. The Filipino government promotes Balsam Pear to help cure diabetes. This wrinkly looking cucumber is often consumed when feeling sick to help release heat from the body.",
           createdAt: new Date(),
           updatedAt: new Date()
@@ -613,7 +604,6 @@ module.exports = {
         {
           "name": "Caramel Ruby Green Tea Blend",
           "type": "Green",
-          "brew": "3",
           "description": "Caramel Ruby is a harmonious blend of Rooibos and Caramel Houjicha. Rich with antioxidants, Rooibos relaxes the body, while Caramel Houjicha is a roasted green tea infused with caramel that aids in promoting digestion. Naturally sweet on its own, Caramel Ruby also pairs well with milk and sugar.",
           createdAt: new Date(),
           updatedAt: new Date()
@@ -694,7 +684,6 @@ module.exports = {
         {
           "name": "Matcha Tea",
           "type": "Green",
-          "brew": "Whisk",
           "description": "Traditionally in Japan, Matcha is ceremonially whisked into a frothy brew and enjoyed with wagashi. The health benefits are magnified with Matcha as the stone-ground Sencha allows for consumption of the whole tea leaf. Using a bamboo whisk and bowl, Matcha becomes a thick green brew that is typically enjoyed in a matcha bowl.",
           createdAt: new Date(),
           updatedAt: new Date()
@@ -751,7 +740,6 @@ module.exports = {
         {
           "name": "Japanese Matcha Shihou",
           "type": "Green",
-          "brew": "Whisk",
           "description": "Made from stone-ground select Sencha shaded two weeks prior to harvest, Matcha Shihou boasts the full benefits of green tea since you consume the entire leaf. It is a higher grade of matcha compared to our Premium version with more nuanced flavors. Matcha is traditionally used in Japanese tea ceremonies, but you can also use it in recipes or add milk and sugar for a nice latte.",
           createdAt: new Date(),
           updatedAt: new Date()
@@ -1032,7 +1020,6 @@ module.exports = {
         {
           "name": "Earl Grey Black Tea",
           "type": "Black",
-          "origin": "Assam, India",
           "description": "Earl Grey is a select blend of black teas infused with the distinctive aroma of bergamot, a citrus fruit. Legend has it that the name comes from a British Prime Minister named Earl Charles Grey, who made the tea readily available to the public. Bergamot oil is traditionally used to ease digestion and anxiety, reduce fevers, and combat stress.",
           createdAt: new Date(),
           updatedAt: new Date()
@@ -1041,15 +1028,11 @@ module.exports = {
         {
           "name": "Assam Black Tea",
           "type": "Black",
-          "origin": "Yunnan, China",
           "description": "Assam Black Tea is harvested from the Assam variant of Camellia sinensis and is grown at or near sea level in India and Southern China; both locations offer the ideal climate for tea growing.  It is known for its full body, briskness, and strong yet smooth taste. Used in many breakfast tea blends, Assam goes well with milk and sugar.",
           createdAt: new Date(),
           updatedAt: new Date()
 
         }
-        ]
-      }
-
     ], { returning: true })
   },
 
