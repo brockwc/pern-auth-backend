@@ -4,8 +4,8 @@ const axios = require('axios')
 //API Request Example
 const apiRequest = (req,res) => {
     //when react app makes a request to this route, we make a request to the API
-    console.log(req.query)
-    axios.get('https://api.openbrewerydb.org/breweries?by_city=san_diego')
+    console.log(req.query.q)
+    axios.get(`https://api.openbrewerydb.org/breweries/search?query=${req.query.q}`)
         .then(response => {
             res.json(response.data)
         })
