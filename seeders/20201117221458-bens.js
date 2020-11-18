@@ -5,8 +5,6 @@ module.exports = {
     await queryInterface.bulkDelete('benefits', null, { truncate: true, cascade: true, restartIdentity: true });
 
     const bulkbenefits = await queryInterface.bulkInsert('benefits', [
-      {
-        "data":[
         {
           "name": "Adaptogen",
           createdAt: new Date(),
@@ -396,8 +394,7 @@ module.exports = {
           "name": "Warming",
           createdAt: new Date(),
           updatedAt: new Date()
-        },]
-      }
+        },
     ], {returing: true })
   },
 
