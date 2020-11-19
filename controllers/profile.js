@@ -1,19 +1,29 @@
 //require models
 const db = require('../models')
+// const url = `http://localhost:4000/api/v1`
 
 //function to render all profiles
-const index = (req,res) => {
-    db.profile.findAll().then((allProfiles) => {
+const allProfiles = (req,res) => {
+    db.profile.findAll().then((foundProfiles) => {
         if(!foundProfiles) return res.json({
-            message: 'No profiles in your database and no love will be found.'
+            message: 'No profiles in your database'
         })
-        res.status(200).json({ profiles: allProfiles})
+        res.status(200).json({ profiles: foundProfiles})
     })
 }
     
 
-
 //function to show just one profile
+const userProfile = (req,res) => {
+    db.profile.findOrCreate({
+        where: {
+            userId: req.params.id
+        }
+    }).then((profile) => {
+        res.status(200).json({ profile })
+    })
+
+}
 
 //function to create
 
@@ -23,5 +33,6 @@ const index = (req,res) => {
 
 //export modules
 module.exports = {
-    index
+    allProfiles,
+    userProfile
 }
