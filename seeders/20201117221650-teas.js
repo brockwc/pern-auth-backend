@@ -516,7 +516,7 @@ module.exports = {
         {
           "name": "Spring Snail Green Tea",
           "type": "Green",
-          "description": "",
+          "description": "Spring comes early in Yunnan! A mild sunny winter, quickly gives way to spring which allows for this fresh and nutty green tea. It is composed entirely of buds and leaves picked in early March. The tea is expertly processed in small batches to ensure a nutty thick fresh green tea taste!",
           createdAt: new Date(),
           updatedAt: new Date()
           
