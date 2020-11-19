@@ -8,3 +8,18 @@ const allProfiles = (req, res) => {
     res.status(200).json({ profiles: foundProfiles})
   })
 }
+
+const userProfile = (req, res) => {
+  db.profile.findOrCreate({
+    where: {userId: req.params.id}
+  }).then((profile) => {
+    res.status(200).json({ profile })
+  })
+}
+
+
+
+module.exports = {
+  allProfiles,
+  userProfile
+}
