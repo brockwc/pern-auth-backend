@@ -1,12 +1,10 @@
 const router = require('express').Router()
-const ctrl = require('../controllers/brewery')
+const ctrl = require('../controllers/beer')
 
-//testing API
-router.get('/search', ctrl.apiRequest)
 
 // PATH = /api/v1/auth
 router.get('/', ctrl.index)
-router.get('/:id', ctrl.show)
+router.get('/:category', ctrl.show)
 router.post('/', ctrl.create)
 router.put('/:id', ctrl.update)
 router.delete('/:id', ctrl.destroy)
