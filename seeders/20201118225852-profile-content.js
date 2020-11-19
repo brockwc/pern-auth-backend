@@ -3,7 +3,7 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('profiles', [{
-      userId: "1",
+      user_Id: "1",
       display_name: "John Doe",
       gender: "male",
       image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
@@ -15,7 +15,7 @@ module.exports = {
     },
 
     {
-      userId: "2",
+      user_Id: "2",
       display_name: "Tim Smith",
       gender: "male",
       image: "https://image.shutterstock.com/image-photo/casually-handsome-confident-young-man-260nw-439433326.jpg",
@@ -27,7 +27,7 @@ module.exports = {
     },
 
     {
-      userId: "3",
+      user_Id: "3",
       display_name: "John Doe",
       gender: "male",
       image: "https://image.shutterstock.com/image-photo/casually-handsome-confident-young-man-260nw-439433326.jpg",
@@ -39,7 +39,7 @@ module.exports = {
     },
 
     {
-      userId: "4",
+      user_Id: "4",
       display_name: "John Doe",
       gender: "male",
       image: "https://image.shutterstock.com/image-photo/casually-handsome-confident-young-man-260nw-439433326.jpg",

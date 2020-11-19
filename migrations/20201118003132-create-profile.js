@@ -11,7 +11,19 @@ module.exports = {
       user_Id: {
         type: Sequelize.INTEGER
       },
+      display_name: {
+        type: Sequelize.STRING
+      },
+      gender: {
+        type: Sequelize.STRING
+      },
       image: {
+        type: Sequelize.STRING
+      },
+      city: {
+        type: Sequelize.STRING
+      },
+      state: {
         type: Sequelize.STRING
       },
       about_me: {
