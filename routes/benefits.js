@@ -5,6 +5,8 @@ const ctrl = require('../controllers')
 
 router.get('/', ctrl.benefits.index)
 router.get('/:id', ctrl.benefits.show)
+router.post('/', ctrl.benefits.create)
+router.get('/', ctrl.benefits.find)
 router.delete('/:id', ctrl.benefits.destroy)
 
 
