@@ -9,7 +9,7 @@ const routes = require('./routes')
 const passport = require('./passport')
 
 const port = process.env.PORT || 4000
-const app = express()
+const app = express() 
 
 // middleware - server logging
 app.use(morgan('dev'))
