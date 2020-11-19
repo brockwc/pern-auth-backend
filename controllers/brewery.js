@@ -1,5 +1,6 @@
 const db = require('../models')
 const axios = require('axios')
+const { response } = require('express')
 
 //API Request
 //routes to http://localhost:4000/api/v1/brewery/search?q=(INSERT QUERY)
@@ -12,6 +13,12 @@ const apiRequest = (req,res) => {
         })
 }
 
+const apiShow = (req,res) => {
+    axios.get(`https://api.openbrewerydb.org/breweries/${req.params.id}`)
+        .then(response => {
+            res.json(response.data)
+        })
+}
 
 
 //Find all of the brewery posts
@@ -75,5 +82,6 @@ module.exports = {
     create,
     update,
     destroy,
-    apiRequest
+    apiRequest,
+    apiShow
 }

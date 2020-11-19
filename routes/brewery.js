@@ -3,6 +3,7 @@ const ctrl = require('../controllers/brewery')
 
 //testing API
 router.get('/search', ctrl.apiRequest)
+router.get('/search/:id', ctrl.apiShow)
 
 // PATH = /api/v1/auth
 router.get('/', ctrl.index)
