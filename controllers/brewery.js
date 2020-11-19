@@ -1,11 +1,20 @@
 const db = require('../models')
 const axios = require('axios')
+const { response } = require('express')
 
-//API Request Example
+//API Request
+//routes to http://localhost:4000/api/v1/brewery/search?q=(INSERT QUERY)
 const apiRequest = (req,res) => {
     //when react app makes a request to this route, we make a request to the API
     console.log(req.query.q)
     axios.get(`https://api.openbrewerydb.org/breweries/search?query=${req.query.q}`)
+        .then(response => {
+            res.json(response.data)
+        })
+}
+
+const apiShow = (req,res) => {
+    axios.get(`https://api.openbrewerydb.org/breweries/${req.params.id}`)
         .then(response => {
             res.json(response.data)
         })
@@ -73,5 +82,6 @@ module.exports = {
     create,
     update,
     destroy,
-    apiRequest
+    apiRequest,
+    apiShow
 }
