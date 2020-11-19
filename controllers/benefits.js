@@ -7,7 +7,7 @@ const index = (req, res) => {
         if (!foundBenefits) return res.json({
             message: 'No Benefits in db'
         })
-        res.json({benefits: foundBenefits})
+        res.json({ benefits: foundBenefits })
     })
         .catch(err => console.log('error at Benefits#index', err))
 }
@@ -18,13 +18,24 @@ const show = (req, res) => {
         if (!foundBenefit) return res.json({
             message: 'Benefit with provided ID not found.'
         })
-        
-        res.json({benefit: foundBenefit})
+
+        res.json({ benefit: foundBenefit })
     })
-    .catch(err => console.log("Error at benefits#index", err))
+        .catch(err => console.log("Error at benefits#show", err))
+}
+
+// Delete a saved benefit
+const destroy = (req, res) => {
+    db.benefit.destroy({
+        where: { id: req.params.id }
+    }).then(() => {
+        res.json({ message: `Benefit with id ${req.params.id} has been deleted.` })
+    })
+        .catch(err => console.log("Error at benefit#destroy", err))
 }
 
 module.exports = {
     index,
-    show
+    show,
+    destroy
 }
