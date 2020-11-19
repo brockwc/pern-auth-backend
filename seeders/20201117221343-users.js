@@ -6,24 +6,25 @@ module.exports = {
 
     const bulkUsers = await queryInterface.bulkInsert('users', [
       {
-        first_name: 'Lauren',
-        last_name: 'Nguyen',
+        firstName: 'Lauren',
+        lastName: 'Nguyen',
         email: 'lauren@email.com',
         password: 'password',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        first_name: 'Brock',
-        last_name: 'Molmen',
+        firstName: 'Brock',
+        lastName: 'Molmen',
         email: 'brock@brock.brock',
         password: 'password',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        first_name: 'Jamie',
-        last_name: 'Cabrigas',
+
+        firstName: 'Jamie',
+        lastName: 'Cabrigas',
         email: 'jami@email.com',
         password: 'password',
         createdAt: new Date(),
