@@ -6,41 +6,27 @@ module.exports = {
 
     const bulkUsers = await queryInterface.bulkInsert('users', [
       {
-        first_name: 'Lauren',
-        last_name: 'Nguyen',
+        firstName: 'Lauren',
+        lastName: 'Nguyen',
         email: 'lauren@email.com',
-<<<<<<< HEAD:seeders/20201117192826-soulsipn-users.js
-        password: 'password', 
-=======
         password: 'password',
->>>>>>> submain:seeders/20201117221343-users.js
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        first_name: 'Brock',
-        last_name: 'Molmen',
+        firstName: 'Brock',
+        lastName: 'Molmen',
         email: 'brock@brock.brock',
-<<<<<<< HEAD:seeders/20201117192826-soulsipn-users.js
-        password: 'password', 
-=======
         password: 'password',
->>>>>>> submain:seeders/20201117221343-users.js
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-<<<<<<< HEAD:seeders/20201117192826-soulsipn-users.js
+
         firstName: 'Jamie',
         lastName: 'Cabrigas',
         email: 'jami@email.com',
-        password: 'password', 
-=======
-        first_name: 'Jamie',
-        last_name: 'Cabrigas',
-        email: 'jami@email.com',
         password: 'password',
->>>>>>> submain:seeders/20201117221343-users.js
         createdAt: new Date(),
         updatedAt: new Date()
       },

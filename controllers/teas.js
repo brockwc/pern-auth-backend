@@ -2,13 +2,18 @@ const db = require('../models')
 
 // Find all Teas
 const index = (req, res) => {
-    db.tea.findAll().then((foundTeas) => {
+    db.tea.findAll({
+        include: db.benefit
+}).then((foundTeas) => {
         if (!foundTeas) return res.json({
             message: 'No teas in db'
         })
         res.json({teas: foundTeas})
     })
-        .catch(err => console.log('error at teas#index', err))
+        .catch(err => {
+            console.log(err)
+            res.sendStatus(500)
+        })
 }
 
 // Find One Tea

@@ -15,7 +15,7 @@ module.exports = {
         {
           "name": "Wuyi Mountain (Bohea) Black Tea",
           "type": "Black",
-          "description": "Formerly known by the trade name 'Bohea,' Wuyi tea is a category of black and oolong teas that are unique to the region. These teas are sometimes called rock teas - or yancha - because of the distinctive rocky terrain they’re grown on. Roasted, robust, and delicately smokey, this gourmet tea can also be infused into savory dishes.",
+          "description": "Formerly known by the trade name 'Bohea,' Wuyi tea is a category of black and oolong teas that are unique to the region. These teas are sometimes called rock teas - or yancha - because of the distinctive rocky terrain theyâ€™re grown on. Roasted, robust, and delicately smokey, this gourmet tea can also be infused into savory dishes.",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -38,7 +38,7 @@ module.exports = {
         {
           "name": "High Mountain Fog Green Tea",
           "type": "Green",
-          "description": "High Mountain Fog Green Tea has a wonderful richness due to its natural growth in the mists and fog of the region. This climate induces the production of more chlorophyll, therefore adding a brighter resilience to the leaf as well as enhancing the unique flavors of the tea. It’s one of the smoothest brews with antioxidant benefits.",
+          "description": "High Mountain Fog Green Tea has a wonderful richness due to its natural growth in the mists and fog of the region. This climate induces the production of more chlorophyll, therefore adding a brighter resilience to the leaf as well as enhancing the unique flavors of the tea. Itâ€™s one of the smoothest brews with antioxidant benefits.",
           createdAt: new Date(),
           updatedAt: new Date()
 
@@ -114,7 +114,7 @@ module.exports = {
         {
           "name": "Liquorice Slices",
           "type": "Herbal",
-          "description": "Liquorice grows wild in Europe and Asia and is surprisingly related to the bean and pea plant. Praised in traditional Chinese medicine to help relieve the chest of phlegm and excessive coughing, Liquorice is also used to flavor food, candy and sodas. Medicinally, it’s taken for its anti-inflammatory, antibiotic and anti-allergenic effects.",
+          "description": "Liquorice grows wild in Europe and Asia and is surprisingly related to the bean and pea plant. Praised in traditional Chinese medicine to help relieve the chest of phlegm and excessive coughing, Liquorice is also used to flavor food, candy and sodas. Medicinally, itâ€™s taken for its anti-inflammatory, antibiotic and anti-allergenic effects.",
           createdAt: new Date(),
           updatedAt: new Date()
           
@@ -122,7 +122,7 @@ module.exports = {
         {
           "name": "Chrysanthemum",
           "type": "Herbal",
-          "description": "Chrysanthemum flowers have a stronger taste while the buds brew delicate and light. Chrysanthemum means “Golden Flower” in Greek. It has been traditionally used in Chinese medicine since the 15th century to help cool and detoxify the body.",
+          "description": "Chrysanthemum flowers have a stronger taste while the buds brew delicate and light. Chrysanthemum means â€œGolden Flowerâ€ in Greek. It has been traditionally used in Chinese medicine since the 15th century to help cool and detoxify the body.",
           createdAt: new Date(),
           updatedAt: new Date()
           
@@ -137,7 +137,7 @@ module.exports = {
         {
           "name": "Sliced Astragalus Root",
           "type": "Herbal",
-          "description": "Also known as Huang Qi or milk vetch, Astragalus has been used in traditional Chinese medicine for centuries. It is known to boost the body’s immune system with antioxidant effects that inhibit free radical production. It is also used to treat various other conditions, including heart disease.",
+          "description": "Also known as Huang Qi or milk vetch, Astragalus has been used in traditional Chinese medicine for centuries. It is known to boost the bodyâ€™s immune system with antioxidant effects that inhibit free radical production. It is also used to treat various other conditions, including heart disease.",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -167,7 +167,7 @@ module.exports = {
         {
           "name": "Roasted Barley (Mugicha)",
           "type": "Herbal",
-          "description": "A popular beverage enjoyed in Japan and Korea for both its health benefits and taste. Enjoy Mugicha iced or cold, any time of the day, it’s especially consumed after meals to help cleanse the blood and aid digestion. Some say this tea smells and tastes similar to coffee! Roasted Barley is known to contain iron, B2 and B1 for energy.",
+          "description": "A popular beverage enjoyed in Japan and Korea for both its health benefits and taste. Enjoy Mugicha iced or cold, any time of the day, itâ€™s especially consumed after meals to help cleanse the blood and aid digestion. Some say this tea smells and tastes similar to coffee! Roasted Barley is known to contain iron, B2 and B1 for energy.",
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -196,7 +196,7 @@ module.exports = {
         {
           "name": "American Ginseng",
           "type": "Herbal",
-          "description": "Ginseng is a fleshy root from the plant species Panax, which means “all heal” in Greek. The name itself is translated from the Chinese characters meaning “man root,” and it has long been used in traditional Chinese medicine. It has been known to be an adaptogen – not only helping the body deal with stress, but also cooling it and boosting immunity.",
+          "description": "Ginseng is a fleshy root from the plant species Panax, which means â€œall healâ€ in Greek. The name itself is translated from the Chinese characters meaning â€œman root,â€ and it has long been used in traditional Chinese medicine. It has been known to be an adaptogen â€“ not only helping the body deal with stress, but also cooling it and boosting immunity.",
           createdAt: new Date(),
           updatedAt: new Date()
 
@@ -204,7 +204,7 @@ module.exports = {
         {
           "name": "Pot Marigold",
           "type": "Herbal",
-          "description": "Pot Marigold, or Calendula, is a species of plant from the Daisy family that blooms throughout the summer and fall seasons. Its name comes from its Old Saxon name, which translates to “it turns with the sun.” Marigolds are considered an edible flower, often being incorporated into salads to add color. Additionally, they have been known to have antiviral and anti-inflammatory properties, and are traditionally used for cramps and constipation.",
+          "description": "Pot Marigold, or Calendula, is a species of plant from the Daisy family that blooms throughout the summer and fall seasons. Its name comes from its Old Saxon name, which translates to â€œit turns with the sun.â€ Marigolds are considered an edible flower, often being incorporated into salads to add color. Additionally, they have been known to have antiviral and anti-inflammatory properties, and are traditionally used for cramps and constipation.",
           createdAt: new Date(),
           updatedAt: new Date()
           
@@ -212,7 +212,7 @@ module.exports = {
         {
           "name": "Longan",
           "type": "Herbal",
-          "description": "Meaning “dragon eye” in Chinese, Longan is a native fruit to Southern China that’s similar to lychee. It is often used in Chinese cuisine and desserts. As an herbal medicine, Longan is high in iron making it an excellent supplement those who need it, especially women. Try eating it like raisins or brew with goji berries for a delicious health drink.",
+          "description": "Meaning â€œdragon eyeâ€ in Chinese, Longan is a native fruit to Southern China thatâ€™s similar to lychee. It is often used in Chinese cuisine and desserts. As an herbal medicine, Longan is high in iron making it an excellent supplement those who need it, especially women. Try eating it like raisins or brew with goji berries for a delicious health drink.",
           createdAt: new Date(),
           updatedAt: new Date()
 
@@ -220,7 +220,7 @@ module.exports = {
         {
           "name": "Lemongrass",
           "type": "Herbal",
-          "description": "Native to India and Asia, Lemon Grass is a tropical plant widely used throughout Asia in cuisines from soups to curries and brewed as a tea. With a mild citrus flavor and aroma, it also contains citral – an essential oil that is also known to be boast antimicrobial and antiviral properties.",
+          "description": "Native to India and Asia, Lemon Grass is a tropical plant widely used throughout Asia in cuisines from soups to curries and brewed as a tea. With a mild citrus flavor and aroma, it also contains citral â€“ an essential oil that is also known to be boast antimicrobial and antiviral properties.",
           createdAt: new Date(),
           updatedAt: new Date()
 
@@ -252,7 +252,7 @@ module.exports = {
         {
           "name": "Jiao Gu Lan (Gynostemma)",
           "type": "Herbal",
-          "description": "Jiao Gu Lan is also known as 'Poor Man’s Ginseng' or 'Miracle Grass.'  This herbaceous vine is indigenous to southern China, Korea, and Japan. A sister to Ginseng, this powerful herb is best known to have high antioxidants and adaptogenic effects that promote longevity. Jiao Gu Lan has been known to improve memory and prevent hair loss.",
+          "description": "Jiao Gu Lan is also known as 'Poor Manâ€™s Ginseng' or 'Miracle Grass.'  This herbaceous vine is indigenous to southern China, Korea, and Japan. A sister to Ginseng, this powerful herb is best known to have high antioxidants and adaptogenic effects that promote longevity. Jiao Gu Lan has been known to improve memory and prevent hair loss.",
           createdAt: new Date(),
           updatedAt: new Date()
           
@@ -268,7 +268,7 @@ module.exports = {
         {
           "name": "Honeysuckle",
           "type": "Herbal",
-          "description": "Honeysuckle means “Gold Silver Flower” in Chinese. One of the oldest medicinal herbs in history, it is traditionally used to clear heat and toxins from the body when sick. Honeysuckle is thought to be a natural antibiotic and cold remedy. Try Honeysuckle the next time you feel ill.",
+          "description": "Honeysuckle means â€œGold Silver Flowerâ€ in Chinese. One of the oldest medicinal herbs in history, it is traditionally used to clear heat and toxins from the body when sick. Honeysuckle is thought to be a natural antibiotic and cold remedy. Try Honeysuckle the next time you feel ill.",
           createdAt: new Date(),
           updatedAt: new Date()
           
@@ -284,7 +284,7 @@ module.exports = {
         {
           "name": "Hawthorn Berry (Shan Zha)",
           "type": "Herbal",
-          "description": "These berries are traditionally brewed to improve blood flow to benefit your heart and digestion. It’s a wonderful traditional remedy to increase the appetite of stubborn children or from being ill. Add a few berries to accent black teas, creating a unique tartness. Full of antioxidants to protect from free radicals.",
+          "description": "These berries are traditionally brewed to improve blood flow to benefit your heart and digestion. Itâ€™s a wonderful traditional remedy to increase the appetite of stubborn children or from being ill. Add a few berries to accent black teas, creating a unique tartness. Full of antioxidants to protect from free radicals.",
           createdAt: new Date(),
           updatedAt: new Date()
           
@@ -308,7 +308,7 @@ module.exports = {
         {
           "name": "Dried Ginger Slices",
           "type": "Herbal",
-          "description": "Commonly used in cold remedies, Ginger is known to boost the immune system, soothe and treat flu symptoms as well as naturally increasing the body’s energy levels.  It's also believed to aid in circulation, nausea, warm the body, and stimulate digestion.",
+          "description": "Commonly used in cold remedies, Ginger is known to boost the immune system, soothe and treat flu symptoms as well as naturally increasing the bodyâ€™s energy levels.  It's also believed to aid in circulation, nausea, warm the body, and stimulate digestion.",
           createdAt: new Date(),
           updatedAt: new Date()
           
@@ -348,7 +348,7 @@ module.exports = {
         {
           "name": "Balsam Pear",
           "type": "Herbal",
-          "description": "Balsam Pear or “bitter melon,” is an edible fruit grown in Asia, Africa and the Caribbean. It has been traditionally used as a home remedy for various illnesses. The Filipino government promotes Balsam Pear to help cure diabetes. This wrinkly looking cucumber is often consumed when feeling sick to help release heat from the body.",
+          "description": "Balsam Pear or â€œbitter melon,â€ is an edible fruit grown in Asia, Africa and the Caribbean. It has been traditionally used as a home remedy for various illnesses. The Filipino government promotes Balsam Pear to help cure diabetes. This wrinkly looking cucumber is often consumed when feeling sick to help release heat from the body.",
           createdAt: new Date(),
           updatedAt: new Date()
 
@@ -356,7 +356,7 @@ module.exports = {
         {
           "name": "Ashitaba",
           "type": "Herbal",
-          "description": "With more antioxidants than Green Tea, Ashitaba is a powerful herb once you master the taste. Ashitaba means “Tomorrow's Leaf” in Japanese since the leaves grow quickly and are consumed for regenerative properties and is believed to hinder wrinkles and signs of old age. An excellent supplement for vegetarians for the high B-12 content.",
+          "description": "With more antioxidants than Green Tea, Ashitaba is a powerful herb once you master the taste. Ashitaba means â€œTomorrow's Leafâ€ in Japanese since the leaves grow quickly and are consumed for regenerative properties and is believed to hinder wrinkles and signs of old age. An excellent supplement for vegetarians for the high B-12 content.",
           createdAt: new Date(),
           updatedAt: new Date()
           
@@ -372,7 +372,7 @@ module.exports = {
         {
           "name": "Zhejiang Tikuanyin Oolong Tea",
           "type": "Oolong",
-          "description": "Tikuanyin, also known as Iron Buddha or Iron Goddess of Mercy, is considered a green oolong tea – a variation from the oolong tea family. This tea is made when the oolong processing is done in a shorter period of time. The result is a brew that’s more like a green tea in color with vegetal tones, but a mix of nutty fragrances that are present in most oolongs.",
+          "description": "Tikuanyin, also known as Iron Buddha or Iron Goddess of Mercy, is considered a green oolong tea â€“ a variation from the oolong tea family. This tea is made when the oolong processing is done in a shorter period of time. The result is a brew thatâ€™s more like a green tea in color with vegetal tones, but a mix of nutty fragrances that are present in most oolongs.",
           createdAt: new Date(),
           updatedAt: new Date()
           
@@ -380,7 +380,7 @@ module.exports = {
         {
           "name": "Ginseng Oolong Tea",
           "type": "Oolong",
-          "description": "Ginseng Oolong is for those who want to sustain energy levels. This tea is made of select oolong leaves and ginseng root extract. Ginseng is known as the “root of mankind,” and is considered an adaptogen - a substance that can help your body deal with stress and find balance in terms of weight and body temperature.",
+          "description": "Ginseng Oolong is for those who want to sustain energy levels. This tea is made of select oolong leaves and ginseng root extract. Ginseng is known as the â€œroot of mankind,â€ and is considered an adaptogen - a substance that can help your body deal with stress and find balance in terms of weight and body temperature.",
           createdAt: new Date(),
           updatedAt: new Date()
           
@@ -388,7 +388,7 @@ module.exports = {
         {
           "name": "Fresh Fragrance Oolong Tea",
           "type": "Oolong",
-          "description": "Fresh Fragrance gets its name because that’s exactly what it produces when brewed - a delightful fresh fragrance! Best enjoyed during and after a meal, Oolong tea is highly prized for its belief to speed up your metabolism and to aid in digestion.",
+          "description": "Fresh Fragrance gets its name because thatâ€™s exactly what it produces when brewed - a delightful fresh fragrance! Best enjoyed during and after a meal, Oolong tea is highly prized for its belief to speed up your metabolism and to aid in digestion.",
           createdAt: new Date(),
           updatedAt: new Date()
           
@@ -428,7 +428,7 @@ module.exports = {
         {
           "name": "Dong Ting Oolong Tea",
           "type": "Oolong",
-          "description": "Dong Ting Oolong is considered to be one of Taiwan’s most famous and finest teas. Harvested on Dong Ting Mountain, it is believed the plants were brought over from the Wuyi Mountains in China. This exquisite tea will give you an amazing floral tone with smooth, sweet, dry flavors that are unique to the region.",
+          "description": "Dong Ting Oolong is considered to be one of Taiwanâ€™s most famous and finest teas. Harvested on Dong Ting Mountain, it is believed the plants were brought over from the Wuyi Mountains in China. This exquisite tea will give you an amazing floral tone with smooth, sweet, dry flavors that are unique to the region.",
           createdAt: new Date(),
           updatedAt: new Date()
           
@@ -452,7 +452,7 @@ module.exports = {
         {
           "name": "Osmanthus Milk Oolong Tea",
           "type": "Oolong",
-          "description": "From the high misty mountains in Taiwan comes a naturally rich and milky flavored tea. Just smell the tea leaves and you’ll know what we’re talking about! Surprisingly, no actual milk is used - the flavor is purely natural from climate conditions the tea tress grow in. All we did was infuse this tea with the unforgettable sweet fragrance of Osmanthus flowers for a delightful cup of tea.",
+          "description": "From the high misty mountains in Taiwan comes a naturally rich and milky flavored tea. Just smell the tea leaves and youâ€™ll know what weâ€™re talking about! Surprisingly, no actual milk is used - the flavor is purely natural from climate conditions the tea tress grow in. All we did was infuse this tea with the unforgettable sweet fragrance of Osmanthus flowers for a delightful cup of tea.",
           createdAt: new Date(),
           updatedAt: new Date()
           
@@ -540,7 +540,7 @@ module.exports = {
         {
           "name": "Taiping Monkey's Pick Green Tea",
           "type": "Green",
-          "description": "Folklore has it that trained monkeys would pick tea leaves from hard to reach trees hanging off cliffs. A winner at the Panama Pacific Exposition in 1915, Taiping Monkey's Pick is characterized by its long, flat leaves with a waffle-like pattern from drying on linen or bamboo mats. It’s also considered one of the top ten teas in China.",
+          "description": "Folklore has it that trained monkeys would pick tea leaves from hard to reach trees hanging off cliffs. A winner at the Panama Pacific Exposition in 1915, Taiping Monkey's Pick is characterized by its long, flat leaves with a waffle-like pattern from drying on linen or bamboo mats. Itâ€™s also considered one of the top ten teas in China.",
           createdAt: new Date(),
           updatedAt: new Date()
           
@@ -564,7 +564,7 @@ module.exports = {
         {
           "name": "Organic San Bei Xiang Green Tea",
           "type": "Green",
-          "description": "The aptly named San Bei Xiang - or “three fragrant cups” in Chinese - has an ability to be steeped at least three times, revealing different flavor nuances with each brew. Nice and full-bodied, this makes a great everyday green tea.",
+          "description": "The aptly named San Bei Xiang - or â€œthree fragrant cupsâ€ in Chinese - has an ability to be steeped at least three times, revealing different flavor nuances with each brew. Nice and full-bodied, this makes a great everyday green tea.",
           createdAt: new Date(),
           updatedAt: new Date()
           
@@ -660,7 +660,7 @@ module.exports = {
         {
           "name": "High Grade China White Tea",
           "type": "White",
-          "description": "High Grade China White is cultivated from large tea trees called Dai Bai, or “Big White,” that have been around since the late 1800s. Enjoy multiple steepings to unravel all its earthy and creamy flavors. As with most white teas, High Grade China White is minimally processed, full of antioxidants, and low in caffeine.",
+          "description": "High Grade China White is cultivated from large tea trees called Dai Bai, or â€œBig White,â€ that have been around since the late 1800s. Enjoy multiple steepings to unravel all its earthy and creamy flavors. As with most white teas, High Grade China White is minimally processed, full of antioxidants, and low in caffeine.",
           createdAt: new Date(),
           updatedAt: new Date()
           
@@ -900,7 +900,7 @@ module.exports = {
         {
           "name": "Organic Supreme Red Peony Black Tea",
           "type": "Black",
-          "description": "Unlike other black teas, Organic Red Peony is made only from young tea buds that are carefully hand-tied into a floret. The tea itself is processed like any black tea, however when you brew it, it’ll bloom into a floating peony. This unique tea can last up to a few steeps, if not more.",
+          "description": "Unlike other black teas, Organic Red Peony is made only from young tea buds that are carefully hand-tied into a floret. The tea itself is processed like any black tea, however when you brew it, itâ€™ll bloom into a floating peony. This unique tea can last up to a few steeps, if not more.",
           createdAt: new Date(),
           updatedAt: new Date()
           
@@ -916,7 +916,7 @@ module.exports = {
         {
           "name": "Masala Chai Orthodox Black Tea",
           "type": "Black",
-          "description": "Chai is a popular tea from India made from a blend of strong black teas and warm, aromatic Indian spices and herbs, including cardamom, cinnamon, ginger, cloves, and pepper. The name literally means “mixed-spice tea” in Hindi and is commonly enjoyed with milk and sugar, but is also great by itself. Only the top quality tea leaves, herbs, and spices go into this blend which results in a delicate, smooth and flavorful brew.",
+          "description": "Chai is a popular tea from India made from a blend of strong black teas and warm, aromatic Indian spices and herbs, including cardamom, cinnamon, ginger, cloves, and pepper. The name literally means â€œmixed-spice teaâ€ in Hindi and is commonly enjoyed with milk and sugar, but is also great by itself. Only the top quality tea leaves, herbs, and spices go into this blend which results in a delicate, smooth and flavorful brew.",
           createdAt: new Date(),
           updatedAt: new Date()
           
@@ -924,7 +924,7 @@ module.exports = {
         {
           "name": "Masala Chai CTC Black Tea",
           "type": "Black",
-          "description": "Chai is a popular tea from India made from a blend of strong black teas and warm, aromatic Indian spices and herbs, including cardamom, cinnamon, ginger, cloves, and pepper. The name literally means “mixed-spice tea” in Hindi and is commonly enjoyed with milk and sugar, but is also great by itself. CTC stands for crush, tear, curl.",
+          "description": "Chai is a popular tea from India made from a blend of strong black teas and warm, aromatic Indian spices and herbs, including cardamom, cinnamon, ginger, cloves, and pepper. The name literally means â€œmixed-spice teaâ€ in Hindi and is commonly enjoyed with milk and sugar, but is also great by itself. CTC stands for crush, tear, curl.",
           createdAt: new Date(),
           updatedAt: new Date()
           
@@ -972,7 +972,7 @@ module.exports = {
         {
           "name": "Summertime Bliss Fruit Blend",
           "type": "Fruit Blend",
-          "description": "Relive summer anytime with our Summertime Bliss. Blended with a base of Hibiscus and Rose Hips for immunity support with added fruit benefits from grapes, oranges and pears. Pears are known to have a cooling effect, creating an excellent remedy for those who have a fever. With its high folic acid content, this tea’s also safe for pregnant women. Summertime Bliss is made from hibiscus, rose hips, apple bits, citrus peels, grapes bits, and pineapple bits.",
+          "description": "Relive summer anytime with our Summertime Bliss. Blended with a base of Hibiscus and Rose Hips for immunity support with added fruit benefits from grapes, oranges and pears. Pears are known to have a cooling effect, creating an excellent remedy for those who have a fever. With its high folic acid content, this teaâ€™s also safe for pregnant women. Summertime Bliss is made from hibiscus, rose hips, apple bits, citrus peels, grapes bits, and pineapple bits.",
           createdAt: new Date(),
           updatedAt: new Date()
           
@@ -980,7 +980,7 @@ module.exports = {
         {
           "name": "Pineapple Dreams Fruit Blend",
           "type": "Fruit Blend",
-          "description": "Take a trip to the Tropics with our caffeine free Pineapple Dreams that’s bursting with tart, fruity flavors. Pineapples are known to prevent macular degeneration - the primary cause of vision loss in adults. Since pineapples are known to be anti-inflammatory, this tea may do well as a supplement for those who suffer from arthritis. Pineapple Dreams is made from hibiscus, rose hips, apple bits, citrus peels, and pineapple bits.",
+          "description": "Take a trip to the Tropics with our caffeine free Pineapple Dreams thatâ€™s bursting with tart, fruity flavors. Pineapples are known to prevent macular degeneration - the primary cause of vision loss in adults. Since pineapples are known to be anti-inflammatory, this tea may do well as a supplement for those who suffer from arthritis. Pineapple Dreams is made from hibiscus, rose hips, apple bits, citrus peels, and pineapple bits.",
           createdAt: new Date(),
           updatedAt: new Date()
           
@@ -1033,7 +1033,7 @@ module.exports = {
           updatedAt: new Date()
 
         }
-    ], { returning: true })
+    ], {})
   },
 
   down: async (queryInterface, Sequelize) => {
