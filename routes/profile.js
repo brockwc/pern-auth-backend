@@ -1,0 +1,14 @@
+//imports 
+const router = require('express').Router()
+// const ctrl = require('../controllers')
+
+// routes 
+// GET -- we need a route to view all profiles in the browse page
+// GET -- we need a route to view a single profile
+// POST -- we need a route to create a profile
+// POST -- update profile
+// delete -- delete profile 
+
+
+//exports
+module.exports = router
