@@ -14,9 +14,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      models.user.hasMany(models.relationship)
-      models.user.hasOne(models.profile)
-      models.user.hasMany(models.message)
+      models.user.hasMany(models.relationship);
+      models.user.hasOne(models.profile);
+      models.user.hasMany(models.message);
     }
     validPassword(passwordTyped) {
       return bcrypt.compareSync(passwordTyped, this.password);
@@ -67,7 +67,8 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
     }
-  }, {
+  }, 
+  {
     sequelize,
     modelName: 'user',
   });
