@@ -24,6 +24,34 @@ const show = (req, res) => {
         .catch(err => console.log("Error at benefits#show", err))
 }
 
+// Create new User Benefit
+const create = (req, res) => {
+    db.user_benefit.findOrCreate({
+        benefitId: req.params.id,
+        userId: req.params.id
+    }).then(function (createdBenefit) {
+        console.log(createdBenefit)
+    })
+}
+
+// Find user_ benefit relations
+const find = (req, res) => {
+    db.benefit.findAll({
+        where: {
+            id: req.params.id
+        },
+        include: {
+            model: db.user,
+        }
+    }).then((savedBenefit) => {
+        // Validations and error handling here
+        res.status(200).json({ benefit: savedBenefit })
+        const savedBenefits = savedBenefit
+        console.log(savedBenefits.users)
+    })
+}
+
+
 // Delete a saved benefit
 const destroy = (req, res) => {
     db.benefit.destroy({
@@ -37,5 +65,7 @@ const destroy = (req, res) => {
 module.exports = {
     index,
     show,
+    create,
+    find,
     destroy
 }
