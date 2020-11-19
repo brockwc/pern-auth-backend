@@ -1,13 +1,10 @@
 const db = require('../models')
 
-const createProfile = (req, res) => { 
-  db.profile.findOrCreate({
-  where: {
-    user: req.user.id  
-  } 
-}).then((userProfile) => {
-  const {display_name, gender, image, city, state, about_me} = req.body;
-  res.json()
-
-})
+const allProfiles = (req, res) => {
+  db.profile.findAll().then((foundProfiles) => {
+    if(!foundProfiles) return res.json({
+      message: 'No profiles in Database'
+    })
+    res.status(200).json({ profiles: foundProfiles})
+  })
 }
