@@ -11,8 +11,6 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      
-     
     }
   };
   message.init({
@@ -20,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     user_b_Id: DataTypes.INTEGER,
     content: DataTypes.TEXT
   }, {
-    sequelize, 
+    sequelize,
     modelName: 'message',
   });
   return message;
