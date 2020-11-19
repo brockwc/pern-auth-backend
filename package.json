@@ -1,7 +1,6 @@
 {
-  "scripts": {
-    "start": "nodemon server.js"
-  },
+  "main": "server.js",
+  
   "dependencies": {
     "bcrypt": "^5.0.0",
     "cors": "^2.8.5",
