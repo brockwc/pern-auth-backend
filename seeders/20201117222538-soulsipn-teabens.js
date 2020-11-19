@@ -2545,7 +2545,54 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       },
-      
+      {
+        benefitId: "64",
+        teaId: "56",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        benefitId: "77",
+        teaId: "56",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        benefitId: "56",
+        teaId: "56",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        benefitId: "36",
+        teaId: "56",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        benefitId: "77",
+        teaId: "7",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        benefitId: "56",
+        teaId: "7",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        benefitId: "5",
+        teaId: "7",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        benefitId: "16",
+        teaId: "7",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
     ])
   },
 
