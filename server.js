@@ -46,9 +46,10 @@ app.use(passport.session())
 // middleware - API routes
 
 app.use('/api/v1/allteas', routes.teas)
+app.use('/api/v1/profile', routes.userBenefits)
 app.use('/api/v1/allbenefits', routes.benefits)
 app.use('/api/v1/auth', routes.auth)
 
 
 // connection
-app.listen(port, () => console.log(`Server is running on port ${port}`))
+app.listen(port, () => console.log(`Your Sexy Server is running on port ${port}`))
