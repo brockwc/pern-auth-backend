@@ -1,0 +1,6 @@
+const router = require('express').Router()
+const ctrl = require('../controllers');
+
+router.post('/:id', ctrl.relationship.likeUser);
+
+module.exports = router

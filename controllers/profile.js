@@ -21,12 +21,12 @@ const createProfile = (req, res) => {
   db.profile.findOrCreate({
     where: {
       userId: req.params.id,
-      display_name: "Elma Jenkins",
-      gender: "female",
+      display_name: "George Washington",
+      gender: "male",
       image: "",
-      city: "New York",
-      state: "New York",
-      about_me: "I am sweet and patient"
+      city: "Washington",
+      state: "District of Columbia",
+      about_me: "I am the first president of the United States"
     }
   }).then((profile) => {
     res.status(200).json({ profile })
