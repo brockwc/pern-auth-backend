@@ -22,12 +22,10 @@ const register = (req, res) => {
 
       // if the user doesnt exist, create and save a user to the DB
       db.user.create({
-        where:{
-        firstName: req.body.firstName,
+        firstName: req.body.lastName,
         lastName: req.body.lastName,
         email: req.body.email,
         password: req.body.password
-        }
       }).then(newUser => {
         console.log('New user created!')
         res.json(newUser)

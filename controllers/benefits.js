@@ -27,8 +27,10 @@ const show = (req, res) => {
 // Create new User Benefit
 const create = (req, res) => {
     db.user_benefit.findOrCreate({
-        benefitId: req.params.id,
-        userId: req.params.id
+        where:{
+        benefitId: req.params.benefitId,
+        userId: req.params.userId
+        }
     }).then(function (createdBenefit) {
         console.log(createdBenefit)
     })
@@ -45,9 +47,7 @@ const find = (req, res) => {
         }
     }).then((savedBenefit) => {
         // Validations and error handling here
-        res.status(200).json({ benefit: savedBenefit })
-        const savedBenefits = savedBenefit
-        console.log(savedBenefits.users)
+        res.redirect('/allteas').json({ benefit: savedBenefit })
     })
 }
 
