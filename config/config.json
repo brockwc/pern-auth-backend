@@ -1,20 +1,20 @@
 {
   "development": {
-    "username": "brockmolmen",
+    "username": "laurennguyen395",
     "password": null,
     "database": "soulsipn",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "username": "brockmolmen",
+    "username": "laurennguyen395",
     "password": null,
     "database": "soulsipn",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "username": "brockmolmen",
+    "username": "laurennguyen395",
     "password": null,
     "database": "soulsipn",
     "host": "127.0.0.1",
