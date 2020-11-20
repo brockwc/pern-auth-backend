@@ -2,6 +2,6 @@ const express = require('express')
 const router = express.Router()
 const ctrl = require('../controllers')
 
-router.get('/', ctrl.userBenefits.index)
+router.get('/:id', ctrl.userBenefits.index)
 
 module.exports = router
