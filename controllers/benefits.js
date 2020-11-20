@@ -28,9 +28,9 @@ const show = (req, res) => {
 const create = (req, res) => {
     console.log(req.body)
     db.user_benefit.findOrCreate({
-        where:{
-        benefitId: req.body.userBenefitData.id,
-        userId: req.body.userId
+        where: {
+            benefitId: req.body.userBenefitData.id,
+            userId: req.body.userId
         }
     }).then(function (createdBenefit) {
         res.json(createdBenefit)
@@ -51,6 +51,25 @@ const find = (req, res) => {
         res.redirect('/allteas').json({ benefit: savedBenefit })
     })
 }
+
+// // Find all saved user_benefits
+// const userBenFind = (req, res) => {
+//     db.user_benefit.findAll({
+//         where: {
+//             benefitId: req.body.userBenefitData.id,
+//             userId: req.body.userId
+//         }
+//     }).then((foundUserBens) => {
+//         if (!foundUserBens) return res.json({
+//             message: 'No teas in db'
+//         })
+//         res.json({ userBenefits: foundUserBenefits })
+//     })
+//         .catch(err => {
+//         console.log(err)
+//         res.sendStatus(500)
+//         })
+// }
 
 
 // Delete a saved benefit
