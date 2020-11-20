@@ -45,6 +45,19 @@ const show = (req, res) => {
     })
 }
 
+const showPost = (req, res) => {
+    db.brewery.findAll({
+        where: {
+            userId: req.params.id
+        }
+    }).then((foundUser) => {
+        if(!foundUser) return res.json({
+            message: 'User with provided ID not found.'
+        })
+        res.status(200).json({ user: foundUser })
+    })
+}
+
 const create = (req, res) => {
     db.brewery.create(req.body).then((savedBrewery) => {
         // Validations and error handling here
@@ -83,5 +96,6 @@ module.exports = {
     update,
     destroy,
     apiRequest,
-    apiShow
+    apiShow,
+    showPost
 }
