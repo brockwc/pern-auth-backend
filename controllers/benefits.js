@@ -26,13 +26,14 @@ const show = (req, res) => {
 
 // Create new User Benefit
 const create = (req, res) => {
+    console.log(req.body)
     db.user_benefit.findOrCreate({
         where:{
-        benefitId: req.params.benefitId,
-        userId: req.params.userId
+        benefitId: req.body.userBenefitData.id,
+        userId: req.body.userId
         }
     }).then(function (createdBenefit) {
-        console.log(createdBenefit)
+        res.json(createdBenefit)
     })
 }
 
