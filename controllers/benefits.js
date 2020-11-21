@@ -52,26 +52,6 @@ const find = (req, res) => {
     })
 }
 
-// // Find all saved user_benefits
-// const userBenFind = (req, res) => {
-//     db.user_benefit.findAll({
-//         where: {
-//             benefitId: req.body.userBenefitData.id,
-//             userId: req.body.userId
-//         }
-//     }).then((foundUserBens) => {
-//         if (!foundUserBens) return res.json({
-//             message: 'No teas in db'
-//         })
-//         res.json({ userBenefits: foundUserBenefits })
-//     })
-//         .catch(err => {
-//         console.log(err)
-//         res.sendStatus(500)
-//         })
-// }
-
-
 // Delete a saved benefit
 const destroy = (req, res) => {
     db.benefit.destroy({
