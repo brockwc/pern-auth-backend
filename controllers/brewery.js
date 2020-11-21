@@ -20,7 +20,6 @@ const apiShow = (req,res) => {
         })
 }
 
-
 //Find all of the brewery posts
 const index = (req, res) => {
     console.log('in the index route')
