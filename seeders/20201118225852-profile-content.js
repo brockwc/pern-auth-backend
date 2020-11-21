@@ -1,5 +1,4 @@
 'use strict';
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('profiles', [{
@@ -45,9 +44,7 @@ module.exports = {
       about_me: "I love bananas",
       createdAt: new Date(),
       updatedAt: new Date()
-    }
-      ], {});
-
+    }], {});
     /**
      * Add seed commands here.
      *
@@ -58,7 +55,6 @@ module.exports = {
      * }], {});
     */
   },
-
   down: async (queryInterface, Sequelize) => {
     /**
      * Add commands to revert seed here.

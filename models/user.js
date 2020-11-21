@@ -60,7 +60,7 @@ module.exports = (sequelize, DataTypes) => {
     birthday: {
       type: DataTypes.DATE,
       validate: {
-        isOfAge() {
+        isOfAge(value) {
           if ((Date.now() - value) < (18 * 31556952000)) {
             throw new Error("Sorry, you must be 18 to use this site")
           }
