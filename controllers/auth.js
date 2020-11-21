@@ -19,7 +19,7 @@ const register = (req, res) => {
         return res.json({ message: "A user with that email already exists" })
       }
 
-      // if the user doesnt exist, create and save a user to the DB
+      // if the user doesn't exist, create and save a user to the DB
       db.user.create({
         name,
         email,

@@ -4,26 +4,41 @@ const db = require('../models')
 // const likeUser = (req, res) => {
 //   db.relationship.findOrCreate({
 //     where: {
-//       user_a_Id: req.user,
-//       user_b_Id: req.params.id,
-//       status: req.body
+//       userId: req.user,
+//       recipient: req.params.id,
+//       status: 0 
 //     }
 //   }).then((likes) => {
 //     res.status(200).json({ likes })
 //   })
-// }
+// } 
+
 const likeUser = (req, res) => {
-    db.relationship.findOrCreate({
-      where: {
-        user_a_Id: 1,
-        user_b_Id: 3,
-        status: 0
-      }
-    }).then((likes) => {
-      res.status(200).json({ likes })
-    })
-  }
-  //GET request to get a like from a user
-  module.exports = {
-    likeUser
-  }
+  db.relationship.findOrCreate({
+    where: {
+      userId: 1,
+      recipient: req.params.id,
+      status: 0  
+    }
+  }).then((likes) => {
+    res.status(200).json({ likes })
+  })
+} 
+
+//DELETE request to remove a like
+const removeLike = (req, res) => {
+  db.relationship.destroy({
+    where:
+      { userId: 1, 
+        recipient: req.params.id }
+  }).then(() => {
+    res.json({ message: `Like deleted.` })
+  }).catch(err => {
+    res.json({ message: err })
+  })
+}
+
+module.exports = {
+  likeUser,
+  removeLike
+}
