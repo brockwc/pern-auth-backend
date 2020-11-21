@@ -12,7 +12,7 @@ const getAllProfiles = (req, res) => {
 //GET request for finding one profile 
 const getProfile = (req, res) => {
   db.profile.findOne({
-    where: { userId: req.params.id }
+    where: { userId: req.body.id }
   }).then((profile) => {
     res.status(200).json({ profile })
   })
