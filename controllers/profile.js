@@ -1,4 +1,5 @@
 const db = require('../models')
+
 // GET request for all profiles
 
 const getAllProfiles = (req, res) => {
@@ -10,10 +11,26 @@ const getAllProfiles = (req, res) => {
   })
 }
 
-//GET request for finding one profile 
-const getProfile = (req, res) => {
+//GET request for finding your own profile 
+const getOwnProfile = (req, res) => {
+  console.log(req.user.dataValues.id);
+  if (!req.user){
+    res.sendStatus(401);
+    return;
+  }
+  db.profile.findByPk(
+    req.user.dataValues.id
+  ).then((profile) => {
+    console.log(profile)
+    res.status(200).json({ profile })
+    
+  })
+}
+
+//GET request for viewing another profile 
+const viewProfile = (req, res) => {
   db.profile.findOne({
-    where: { userId: req.body.id }
+    where: { userId: req.params.id }
   }).then((profile) => {
     res.status(200).json({ profile })
   })
@@ -81,7 +98,8 @@ const removeProfile = (req, res) => {
 
 module.exports = {
   getAllProfiles,
-  getProfile,
+  getOwnProfile,
+  viewProfile,
   createProfile,
   removeProfile,
   updateProfile
