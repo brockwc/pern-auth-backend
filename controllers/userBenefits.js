@@ -23,8 +23,7 @@ const destroy = (req, res) => {
     db.user_benefit.destroy({
         where: { 
             id: req.params.id 
-        },
-        include: db.benefit
+        }
     }).then(() => {
         res.json({ message: `Benefit with id ${req.params.id} has been deleted.` })
     })
