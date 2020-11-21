@@ -1,6 +1,7 @@
 const db = require('../models')
 // GET request for all profiles
-const allProfiles = (req, res) => {
+
+const getAllProfiles = (req, res) => {
   db.profile.findAll().then((foundProfiles) => {
     if (!foundProfiles) return res.json({
       message: 'No profiles in Database'
@@ -8,14 +9,16 @@ const allProfiles = (req, res) => {
     res.status(200).json({ profiles: foundProfiles })
   })
 }
-//GET request for finding one profile
+
+//GET request for finding one profile 
 const getProfile = (req, res) => {
   db.profile.findOne({
-    where: { userId: req.params.id }
+    where: { userId: req.body.id }
   }).then((profile) => {
     res.status(200).json({ profile })
   })
 }
+
 //POST request for creating a profile if it doesn't exist
 const createProfile = (req, res) => {
   db.profile.findOrCreate({
@@ -32,6 +35,7 @@ const createProfile = (req, res) => {
     res.status(200).json({ profile })
   })
 }
+
 // const updateProfile = (req, res) => {
 //   db.profile.update({
 //     ...req.body
@@ -46,6 +50,7 @@ const createProfile = (req, res) => {
 //     res.status(200).json({profile: updatedProfile })
 //   })
 // }
+
 const updateProfile = (req, res) => {
   db.profile.update({
     city: "San Francisco",
@@ -61,6 +66,7 @@ const updateProfile = (req, res) => {
     res.status(200).json({ profile: updatedProfile })
   })
 }
+
 //DELETE request to remove a profile
 const removeProfile = (req, res) => {
   db.profile.destroy({
@@ -72,8 +78,9 @@ const removeProfile = (req, res) => {
     res.json({ message: err })
   })
 }
+
 module.exports = {
-  allProfiles,
+  getAllProfiles,
   getProfile,
   createProfile,
   removeProfile,

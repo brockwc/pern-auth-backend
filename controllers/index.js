@@ -1,5 +1,5 @@
 module.exports = {
-    //require all routes
-    profile: require("./profile"),
-    auth: require('./auth')
+    auth: require('./auth'),
+    profile: require('./profile'),
+    relationship: require('./relationship')
 }
