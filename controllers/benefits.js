@@ -52,20 +52,10 @@ const find = (req, res) => {
     })
 }
 
-// Delete a saved benefit
-const destroy = (req, res) => {
-    db.benefit.destroy({
-        where: { id: req.params.id }
-    }).then(() => {
-        res.json({ message: `Benefit with id ${req.params.id} has been deleted.` })
-    })
-        .catch(err => console.log("Error at benefit#destroy", err))
-}
 
 module.exports = {
     index,
     show,
     create,
     find,
-    destroy
 }

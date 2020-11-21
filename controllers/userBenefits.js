@@ -18,6 +18,20 @@ const index = (req, res) => {
         .catch(err => console.log('error at userBenefits#index', err))
 }
 
+// Delete a saved benefit
+const destroy = (req, res) => {
+    db.user_benefit.destroy({
+        where: { 
+            id: req.params.id 
+        },
+        include: db.benefit
+    }).then(() => {
+        res.json({ message: `Benefit with id ${req.params.id} has been deleted.` })
+    })
+        .catch(err => console.log("Error at benefit#destroy", err))
+}
+
 module.exports = {
-    index
+    index,
+    destroy
 }
