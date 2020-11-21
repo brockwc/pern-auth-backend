@@ -12,10 +12,10 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
     }
-  };
+  }; 
   relationship.init({
-    user_a_Id: DataTypes.INTEGER,
-    user_b_Id: DataTypes.INTEGER,
+    userId: DataTypes.INTEGER,
+    recipient: DataTypes.INTEGER,
     status: DataTypes.INTEGER
   }, {
     sequelize,
