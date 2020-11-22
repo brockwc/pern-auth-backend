@@ -11,19 +11,28 @@ const getAllProfiles = (req, res) => {
   })
 }
 
+
+// this will help us pull the user 
+// 
+const getUser = (req,res) => {
+  db.user.findByPK(req.user.dataValues.id).then((pizza) => {
+    res.json({ user: pizza})
+  })
+}
+
+
 //GET request for finding your own profile 
 const getOwnProfile = (req, res) => {
-  console.log(req.user.dataValues.id);
+  // console.log(req.user.dataValues.id);
   if (!req.user){
     res.sendStatus(401);
     return;
   }
   db.profile.findByPk(
     req.user.dataValues.id
-  ).then((profile) => {
-    console.log(profile)
-    res.status(200).json({ profile })
-    
+  ).then((pizza) => {
+    console.log(pizza)
+    res.status(200).json({ profile: pizza })
   })
 }
 
@@ -40,47 +49,37 @@ const viewProfile = (req, res) => {
 const createProfile = (req, res) => {
   db.profile.findOrCreate({
     where: {
-      userId: req.params.id,
-      display_name: "Elma Jenkins",
-      gender: "female",
+      userId: req.user,
+      display_name: "George Washington",
+      gender: "male",
       image: "",
-      city: "New York",
-      state: "New York",
-      about_me: "I am sweet and patient"
+      city: "Washington",
+      state: "District of Columbia",
+      about_me: "I am the first president of the United States"
     }
   }).then((profile) => {
     res.status(200).json({ profile })
   })
 }
 
-// const updateProfile = (req, res) => {
-//   db.profile.update({
-//     ...req.body
-//   }, {
-//     where: {
-//       userId: req.params.id
-//     }
-//   }).then((updatedProfile) => {
-//     if (!updatedProfile) return res.json({
-//       message: `No profile with id ${req.params.id} found.`
-//     })
-//     res.status(200).json({profile: updatedProfile })
-//   })
-// }
+const editProfile = (req, res) => {
+  const { displayName, gender, profilePic, city, geoState, aboutMe } = req.body
 
-const updateProfile = (req, res) => {
-  db.profile.update({
-    city: "San Francisco",
-    state: "California",
-  }, {
+  db.profile.findOrCreate({
     where: {
-      userId: req.params.id
+      userId: req.user.dataValues.id
     }
-  }).then((updatedProfile) => {
-    if (!updatedProfile) return res.json({
-      message: `No profile with id ${req.params.id} found.`
+  }).then((row) => {
+    row.update({
+      display_name: displayName,
+      gender: gender,
+      image: profilePic,
+      city: city,
+      state: geoState,
+      about_me: aboutMe
+    }).then((editedProfile) => {
+      res.status(200).json({ profile: editedProfile })
     })
-    res.status(200).json({ profile: updatedProfile })
   })
 }
 
@@ -102,5 +101,5 @@ module.exports = {
   viewProfile,
   createProfile,
   removeProfile,
-  updateProfile
+  editProfile
 }
