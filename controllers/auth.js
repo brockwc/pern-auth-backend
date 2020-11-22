@@ -10,7 +10,7 @@ const register = (req, res) => {
   
   // validate the POSTed data - making sure we have a name, an email, a pw
   if (!name || !email || !password || !birthday) {
-    return res.json({ message: 'Please enter a name, an email, and a password' })
+    return res.json({ message: 'Please enter a name, an email, a password, and your birthday.' })
   }
 
   // make sure the user doesn't already exist
