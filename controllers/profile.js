@@ -36,34 +36,24 @@ const createProfile = (req, res) => {
   })
 }
 
-// const updateProfile = (req, res) => {
-//   db.profile.update({
-//     ...req.body
-//   }, {
-//     where: {
-//       userId: req.params.id
-//     }
-//   }).then((updatedProfile) => {
-//     if (!updatedProfile) return res.json({
-//       message: `No profile with id ${req.params.id} found.`
-//     })
-//     res.status(200).json({profile: updatedProfile })
-//   })
-// }
+const editProfile = (req, res) => {
+  const { displayName, gender, profilePic, city, geoState, aboutMe } = req.body
 
-const updateProfile = (req, res) => {
-  db.profile.update({
-    city: "San Francisco",
-    state: "California",
-  }, {
+  db.profile.findOrCreate({
     where: {
-      userId: req.params.id
+      userId: req.user.dataValues.id
     }
-  }).then((updatedProfile) => {
-    if (!updatedProfile) return res.json({
-      message: `No profile with id ${req.params.id} found.`
+  }).then((row) => {
+    row.update({
+      display_name: displayName,
+      gender: gender,
+      image: profilePic,
+      city: city,
+      state: geoState,
+      about_me: aboutMe
+    }).then((editedProfile) => {
+      res.status(200).json({ profile: editedProfile })
     })
-    res.status(200).json({ profile: updatedProfile })
   })
 }
 
@@ -84,5 +74,5 @@ module.exports = {
   getProfile,
   createProfile,
   removeProfile,
-  updateProfile
+  editProfile
 }
