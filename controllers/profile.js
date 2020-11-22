@@ -11,19 +11,28 @@ const getAllProfiles = (req, res) => {
   })
 }
 
+
+// this will help us pull the user 
+// 
+const getUser = (req,res) => {
+  db.user.findByPK(req.user.dataValues.id).then((pizza) => {
+    res.json({ user: pizza})
+  })
+}
+
+
 //GET request for finding your own profile 
 const getOwnProfile = (req, res) => {
-  console.log(req.user.dataValues.id);
+  // console.log(req.user.dataValues.id);
   if (!req.user){
     res.sendStatus(401);
     return;
   }
   db.profile.findByPk(
     req.user.dataValues.id
-  ).then((profile) => {
-    console.log(profile)
-    res.status(200).json({ profile })
-    
+  ).then((pizza) => {
+    console.log(pizza)
+    res.status(200).json({ profile: pizza })
   })
 }
 
@@ -40,7 +49,7 @@ const viewProfile = (req, res) => {
 const createProfile = (req, res) => {
   db.profile.findOrCreate({
     where: {
-      userId: req.params.id,
+      userId: req.user,
       display_name: "George Washington",
       gender: "male",
       image: "",
