@@ -1,6 +1,7 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
+    await queryInterface.bulkDelete('profiles', null, { truncate: true, cascade: true, restartIdentity: true });
     await queryInterface.bulkInsert('profiles', [{
       userId: "1",
       display_name: "John Doe",

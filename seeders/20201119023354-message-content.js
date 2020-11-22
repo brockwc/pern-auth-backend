@@ -2,6 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
+    await queryInterface.bulkDelete('messages', null, { truncate: true, cascade: true, restartIdentity: true });
     await queryInterface.bulkInsert('messages', [
       {
         user_a_Id: 1,
