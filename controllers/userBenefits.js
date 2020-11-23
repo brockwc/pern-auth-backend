@@ -6,7 +6,7 @@ const index = (req, res) => {
     db.user.findAll({
         where: {
             id: req.params.id
-        },
+        }, 
         include: db.benefit
     }).then((foundUserBenefits) => {
         console.log('query complete')
