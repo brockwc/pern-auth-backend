@@ -14,15 +14,39 @@ const index = (req, res) => {
 
 // Find One Benefit
 const show = (req, res) => {
-    db.benefit.findByPk(req.params.id).then((foundBenefit) => {
+    db.benefit.findAll({
+        where: {
+            id: req.params.id
+        },
+        include: db.tea
+    }).then((foundBenefit) => {
         if (!foundBenefit) return res.json({
             message: 'Benefit with provided ID not found.'
         })
-
         res.json({ benefit: foundBenefit })
     })
         .catch(err => console.log("Error at benefits#show", err))
 }
+
+
+// const show = (req, res) => {
+//     db.benefit.findByPk({
+//         where: {
+//             benefitId: req.params.id
+//         },
+//         include: db.tea
+//         }).then((foundBenefitTea) => {
+//         if (!foundBenefitTea) return res.json({
+//             message: 'Benefit_Tea with provided ID not found.'
+//         })
+//         res.json({ benefitTea: foundBenefitTea })
+//     })
+//         .catch(err => console.log("Error at benefits#show", err))
+// }
+
+
+
+
 
 // Create new User Benefit
 const create = (req, res) => {
