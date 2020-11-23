@@ -6,5 +6,6 @@ const ctrl = require('../controllers')
 router.post('/login', passport.authenticate('local'), ctrl.auth.login)
 router.post('/register', ctrl.auth.register)
 router.delete('/logout', ctrl.auth.logout)
+router.delete('/delete', ctrl.auth.deleteUser)
 
 module.exports = router 

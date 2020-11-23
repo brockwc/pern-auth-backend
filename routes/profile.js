@@ -7,10 +7,10 @@ router.get('/', ctrl.profile.getOwnProfile);
 
 router.get('/:id', ctrl.profile.viewProfile);
 
-router.post('/:id', ctrl.profile.createProfile);
+router.post('/edit/:id', ctrl.profile.createProfile);
 
-router.put('/edit', ctrl.profile.updateProfile);
+router.put('/', ctrl.profile.editProfile);
 
-router.delete('/:id', ctrl.profile.removeProfile);
+router.delete('/', ctrl.profile.deleteProfile);
 
 module.exports = router

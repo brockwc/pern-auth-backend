@@ -8,11 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-<<<<<<< HEAD
-      userID: {
-=======
       userId: {
->>>>>>> submain
         type: Sequelize.INTEGER
       },
       recipient: {

@@ -27,10 +27,30 @@ const register = (req, res) => {
         password,
         birthday
       }).then(newUser => {
+        db.profile.create({
+          userId: newUser.id,
+        })
         console.log('New user created!')
         res.json(newUser)
       })
     })
+}
+
+const deleteUser = (req, res) => {
+  const currentUserId = req.user.id
+
+  console.log(`The deleteUser function was called successfully, user id is ${currentUserId}`)
+
+  db.user.destroy({
+    where: {
+      id: currentUserId
+    }
+  }).then((num) => {
+    console.log(`${num} users deleted`)
+    res.json({ message: `User with id ${currentUserId} deleted.` })
+  }).catch(err => {
+    res.json({ message: err })
+  })
 }
 
 const logout = (req, res) => {
@@ -44,5 +64,6 @@ const logout = (req, res) => {
 module.exports = {
   login,
   register,
+  deleteUser,
   logout
 }
