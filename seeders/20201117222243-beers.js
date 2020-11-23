@@ -57,8 +57,40 @@ module.exports = {
         comment: 'Fruity, hazy IPA and really enjoyed this one.',
         createdAt: new Date(),
         updatedAt: new Date()
+      },
+      {
+        userId: 4,
+        breweryId: 7350,
+        name: 'Eagle Harbor NW',
+        category: 'IPA',
+        style: 'Classic IPA',
+        rating: 4,
+        comment: 'Firm hop aroma and a tasty classic IPA.',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        userId: 4,
+        breweryId: 299,
+        name: 'Disco Daze',
+        category: 'IPA',
+        style: 'Citrusy',
+        rating: 4,
+        comment: 'Citrusy IPA with lychee and berry notes, another good one.',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        userId: 3,
+        breweryId: 7350,
+        name: 'City Lies In Dust',
+        category: 'IPA',
+        style: 'Hazy',
+        rating: 5,
+        comment: 'Fruity refreshing IPA. Loved this one!',
+        createdAt: new Date(),
+        updatedAt: new Date()
       }
-
     ], {returning: true})
     console.log('bulkInsert:', bulkBeers)
   },
