@@ -33,6 +33,39 @@ const register = (req, res) => {
     })
 }
 
+const findUser = (req, res) => {
+  db.user.findOne({
+    where: {
+      id: req.user.id
+    }
+  })
+  .then(foundUser => {
+    res.json(foundUser)
+  })
+}
+
+
+
+const updateUser = (req, res) => {
+  const { firstName, lastName, email } = req.body
+
+  db.user.update({
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+  }, {
+      where: {
+          id: req.user.id
+      }
+  })
+  .then(function (results) {
+      res.redirect('/profile')
+  }).catch(function(err){})
+}
+
+
+
+
 const logout = (req, res) => {
   if (!req.user) {
     return res.json({ message: 'No User to log out' })
@@ -44,5 +77,7 @@ const logout = (req, res) => {
 module.exports = {
   login,
   register,
-  logout
+  logout,
+  updateUser,
+  findUser
 }
