@@ -48,6 +48,7 @@ app.use(passport.session())
 app.use('/api/v1/allteas', routes.teas)
 app.use('/api/v1/profile', routes.userBenefits)
 app.use('/api/v1/allbenefits', routes.benefits)
+app.use('/api/v1/user', routes.user)
 app.use('/api/v1/auth', routes.auth)
 
 
