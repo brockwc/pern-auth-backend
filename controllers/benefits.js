@@ -29,25 +29,6 @@ const show = (req, res) => {
 }
 
 
-// const show = (req, res) => {
-//     db.benefit.findByPk({
-//         where: {
-//             benefitId: req.params.id
-//         },
-//         include: db.tea
-//         }).then((foundBenefitTea) => {
-//         if (!foundBenefitTea) return res.json({
-//             message: 'Benefit_Tea with provided ID not found.'
-//         })
-//         res.json({ benefitTea: foundBenefitTea })
-//     })
-//         .catch(err => console.log("Error at benefits#show", err))
-// }
-
-
-
-
-
 // Create new User Benefit
 const create = (req, res) => {
     console.log(req.body)
