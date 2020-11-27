@@ -15,10 +15,11 @@ const db = require('../models')
 
 const likeUser = (req, res) => {
   db.relationship.findOrCreate({
+    status: 0
+  }, {
     where: {
-      userId: 1,
-      recipient: req.params.id,
-      status: 0  
+      userId: req.user.id,
+      recipient: recipientId
     }
   }).then((likes) => {
     res.status(200).json({ likes })

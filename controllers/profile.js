@@ -79,7 +79,7 @@ const editProfile = (req, res) => {
     where: {
       userId: currentUserId,
     }
-  })
+  }) 
   .then((editedProfile) => {
     res.status(200).json({ profile: editedProfile })
   })
