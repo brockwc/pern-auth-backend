@@ -14,12 +14,19 @@ const db = require('../models')
 // } 
 
 const likeUser = (req, res) => {
+  const recipientId = req.params.id
+  const { currentUser } = req.body
+  const likeStatus = 0
+
+  console.log(`The recipientId is ${recipientId}`)
+  console.log(`currentUser is ${currentUser}`)
+
+  // this needs to be updated when blocking is implemented
   db.relationship.findOrCreate({
-    status: 0
-  }, {
     where: {
-      userId: req.user.id,
-      recipient: recipientId
+      userId: currentUser,
+      recipient: recipientId,
+      status: likeStatus
     }
   }).then((likes) => {
     res.status(200).json({ likes })
@@ -27,11 +34,17 @@ const likeUser = (req, res) => {
 } 
 
 //DELETE request to remove a like
-const removeLike = (req, res) => {
+const unlikeUser = (req, res) => {
+  const recipientId = req.params.id
+  const { currentUser } = req.body
+  const likeStatus = 0
+
   db.relationship.destroy({
-    where:
-      { userId: 1, 
-        recipient: req.params.id }
+    where: {
+      userId: currentUser,
+      recipient: recipientId,
+      status: likeStatus
+    }
   }).then(() => {
     res.json({ message: `Like deleted.` })
   }).catch(err => {
@@ -41,5 +54,5 @@ const removeLike = (req, res) => {
 
 module.exports = {
   likeUser,
-  removeLike
+  unlikeUser
 }

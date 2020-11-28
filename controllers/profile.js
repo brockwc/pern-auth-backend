@@ -37,6 +37,8 @@ const getOwnProfile = (req, res) => {
 
 //GET request for viewing another profile 
 const viewProfile = (req, res) => {
+  const { targetProfile } = req.body
+  console.log(targetProfile)
   db.profile.findOne({
     where: { userId: req.params.id }
   }).then((profile) => {
